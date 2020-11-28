@@ -1,0 +1,12 @@
+
+State Machine - |Audio_Codec|current_state
+Name current_state.ACK_3 current_state.Send_Data_2 current_state.ACK_2 current_state.Send_Data_1 current_state.ACK_1 current_state.Send_Address current_state.Start_Condition current_state.Wait_For_Transmit current_state.Stop_Condition 
+current_state.Wait_For_Transmit 0 0 0 0 0 0 0 0 0 
+current_state.Start_Condition 0 0 0 0 0 0 1 1 0 
+current_state.Send_Address 0 0 0 0 0 1 0 1 0 
+current_state.ACK_1 0 0 0 0 1 0 0 1 0 
+current_state.Send_Data_1 0 0 0 1 0 0 0 1 0 
+current_state.ACK_2 0 0 1 0 0 0 0 1 0 
+current_state.Send_Data_2 0 1 0 0 0 0 0 1 0 
+current_state.ACK_3 1 0 0 0 0 0 0 1 0 
+current_state.Stop_Condition 0 0 0 0 0 0 0 1 1 
