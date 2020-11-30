@@ -1,5 +1,5 @@
 Flow report for Audio_Codec
-Sat Nov 28 00:58:54 2020
+Sun Nov 29 23:14:46 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sat Nov 28 00:58:31 2020           ;
+; Flow Status                     ; Successful - Sun Nov 29 23:14:30 2020           ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                   ; Audio_Codec                                     ;
 ; Top-level Entity Name           ; Audio_Codec                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 246 / 41,910 ( < 1 % )                          ;
-; Total registers                 ; 454                                             ;
+; Logic utilization (in ALMs)     ; 273 / 41,910 ( < 1 % )                          ;
+; Total registers                 ; 543                                             ;
 ; Total pins                      ; 121 / 499 ( 24 % )                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 512 / 5,662,720 ( < 1 % )                       ;
+; Total block memory bits         ; 1,152 / 5,662,720 ( < 1 % )                     ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                                 ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                   ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                   ;
@@ -68,32 +68,62 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2020 00:41:53 ;
+; Start date & time ; 11/29/2020 22:48:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Audio_Codec         ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121371216646.160654931303516           ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; audio_pll.cmp                          ; --            ; --          ; --         ;
-; MISC_FILE                           ; audio_pll_sim/audio_pll.vo             ; --            ; --          ; --         ;
-; MISC_FILE                           ; audio_memory_bb.v                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; audio_memory_syn.v                     ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; SPD_FILE                            ; audio_pll.spd                          ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                              ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                     ; Value                                                                  ; Default Value ; Entity Name ; Section Id       ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID               ; 121371216646.160671530101684                                           ; --            ; --          ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                                     ; --            ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                     ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                      ; --            ; --          ; --               ;
+; MISC_FILE                           ; audio_pll.cmp                                                          ; --            ; --          ; --               ;
+; MISC_FILE                           ; audio_pll_sim/audio_pll.vo                                             ; --            ; --          ; --               ;
+; MISC_FILE                           ; audio_memory_bb.v                                                      ; --            ; --          ; --               ;
+; MISC_FILE                           ; audio_memory_syn.v                                                     ; --            ; --          ; --               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                 ; --            ; --          ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                 ; --            ; --          ; Top              ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                 ; --            ; --          ; Top              ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                    ; --            ; --          ; --               ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                  ; --            ; --          ; --               ;
+; SLD_FILE                            ; db/stp2_auto_stripped.stp                                              ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                          ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                          ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=128                                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                             ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=2                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=128                                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,basic,1,                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                          ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=5                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=5                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=5                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=51                                           ; --            ; --          ; auto_signaltap_0 ;
+; SPD_FILE                            ; audio_pll.spd                                                          ; --            ; --          ; --               ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                     ; --            ; --          ; --               ;
+; USE_SIGNALTAP_FILE                  ; stp2.stp                                                               ; --            ; --          ; --               ;
++-------------------------------------+------------------------------------------------------------------------+---------------+-------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -101,16 +131,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 4793 MB             ; 00:00:39                           ;
-; Fitter               ; 00:01:34     ; 1.0                     ; 6330 MB             ; 00:02:01                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 4842 MB             ; 00:00:13                           ;
-; Timing Analyzer      ; 00:00:12     ; 1.0                     ; 5140 MB             ; 00:00:11                           ;
-; Analysis & Synthesis ; 00:01:04     ; 1.0                     ; 4911 MB             ; 00:01:17                           ;
+; Analysis & Synthesis ; 00:00:52     ; 1.0                     ; 4912 MB             ; 00:01:08                           ;
+; Fitter               ; 00:02:09     ; 1.0                     ; 6343 MB             ; 00:03:10                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4843 MB             ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:17     ; 1.1                     ; 5184 MB             ; 00:00:17                           ;
+; Analysis & Synthesis ; 00:00:49     ; 1.0                     ; 4907 MB             ; 00:01:00                           ;
 ; Partition Merge      ; 00:00:03     ; 1.0                     ; 4902 MB             ; 00:00:02                           ;
-; Fitter               ; 00:02:17     ; 1.0                     ; 6489 MB             ; 00:03:17                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 4847 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:22     ; 1.1                     ; 5178 MB             ; 00:00:22                           ;
-; Total                ; 00:06:28     ; --                      ; --                  ; 00:08:12                           ;
+; Fitter               ; 00:01:35     ; 1.0                     ; 6465 MB             ; 00:02:13                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4844 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:16     ; 1.1                     ; 5184 MB             ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 4916 MB             ; 00:00:51                           ;
+; Partition Merge      ; 00:00:03     ; 1.0                     ; 4891 MB             ; 00:00:02                           ;
+; Fitter               ; 00:00:35     ; 1.0                     ; 6131 MB             ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 4907 MB             ; 00:01:00                           ;
+; Partition Merge      ; 00:00:03     ; 1.0                     ; 4903 MB             ; 00:00:03                           ;
+; Fitter               ; 00:01:41     ; 1.0                     ; 6469 MB             ; 00:02:24                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 4849 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.1                     ; 5184 MB             ; 00:00:14                           ;
+; Total                ; 00:10:33     ; --                      ; --                  ; 00:13:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -128,6 +166,14 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -138,6 +184,14 @@ quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c A
 quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_asm --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_sta Audio_Codec -c Audio_Codec
+quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_asm --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_sta Audio_Codec -c Audio_Codec
+quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
 quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec

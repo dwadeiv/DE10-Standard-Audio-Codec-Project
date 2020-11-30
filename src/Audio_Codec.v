@@ -131,7 +131,7 @@ assign Data2 = 8'b0000_0000;
 
 audio_pll audio_pll(
 	.refclk   (CLOCK_50),  
-	.rst      (KEY[0]),  
+	.rst      (~KEY[0]),  
 	.outclk_0 (clk)
 );
 
