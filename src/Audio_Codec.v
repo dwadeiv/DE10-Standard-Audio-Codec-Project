@@ -152,7 +152,7 @@ always @(posedge clk or negedge KEY[0])
         current_state = next_state;
 
 // Next State Logic
-always @(current_state)
+always @(*)
     begin
         case (current_state)
             Wait_For_Transmit: 
@@ -254,7 +254,7 @@ always @(negedge clk or negedge KEY[0])
             ACK_1:
             begin
 				ACK_cycle = 1;
-				if(returned_ack_n == 0)
+				if(returned_ack_n == 1)
 					ACK_received = 3'b001;
 				else
 					ACK_received = 3'b000;
@@ -267,7 +267,7 @@ always @(negedge clk or negedge KEY[0])
             ACK_2:
             begin
 				ACK_cycle = 1;
-				if(returned_ack_n == 0)
+				if(returned_ack_n == 1)
 					ACK_received = 3'b010;
 				else
 					ACK_received = 3'b000;
@@ -280,7 +280,7 @@ always @(negedge clk or negedge KEY[0])
 			ACK_3:
 			begin
 				ACK_cycle = 1;
-				if(returned_ack_n == 0)
+				if(returned_ack_n == 1)
 					ACK_received = 3'b100;
 				else
 					ACK_received = 3'b000;

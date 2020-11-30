@@ -1,5 +1,5 @@
 Flow report for Audio_Codec
-Sun Nov 29 23:14:46 2020
+Sun Nov 29 23:42:57 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sun Nov 29 23:14:30 2020           ;
+; Flow Status                     ; Successful - Sun Nov 29 23:42:40 2020           ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                   ; Audio_Codec                                     ;
 ; Top-level Entity Name           ; Audio_Codec                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 273 / 41,910 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 274 / 41,910 ( < 1 % )                          ;
 ; Total registers                 ; 543                                             ;
 ; Total pins                      ; 121 / 499 ( 24 % )                              ;
 ; Total virtual pins              ; 0                                               ;
@@ -148,7 +148,17 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; 00:01:41     ; 1.0                     ; 6469 MB             ; 00:02:24                           ;
 ; Assembler            ; 00:00:09     ; 1.0                     ; 4849 MB             ; 00:00:09                           ;
 ; Timing Analyzer      ; 00:00:15     ; 1.1                     ; 5184 MB             ; 00:00:14                           ;
-; Total                ; 00:10:33     ; --                      ; --                  ; 00:13:50                           ;
+; Analysis & Synthesis ; 00:00:43     ; 1.0                     ; 4913 MB             ; 00:00:57                           ;
+; Partition Merge      ; 00:00:02     ; 1.0                     ; 4768 MB             ; 00:00:02                           ;
+; Fitter               ; 00:02:42     ; 1.0                     ; 6352 MB             ; 00:04:03                           ;
+; Assembler            ; 00:00:12     ; 1.0                     ; 4849 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.1                     ; 5185 MB             ; 00:00:18                           ;
+; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 4907 MB             ; 00:00:56                           ;
+; Partition Merge      ; 00:00:02     ; 1.0                     ; 4757 MB             ; 00:00:01                           ;
+; Fitter               ; 00:02:17     ; 1.0                     ; 6341 MB             ; 00:03:27                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4848 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:16     ; 1.1                     ; 5185 MB             ; 00:00:15                           ;
+; Total                ; 00:17:58     ; --                      ; --                  ; 00:24:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -174,6 +184,16 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DAVIDWADEIV8A93  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -192,6 +212,16 @@ quartus_sta Audio_Codec -c Audio_Codec
 quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
 quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_asm --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_sta Audio_Codec -c Audio_Codec
+quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_asm --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
+quartus_sta Audio_Codec -c Audio_Codec
 quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_cdb --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec --merge=on
 quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
