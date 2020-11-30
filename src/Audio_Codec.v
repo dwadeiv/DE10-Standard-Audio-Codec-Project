@@ -41,23 +41,6 @@ module Audio_Codec(
 	output		          		DRAM_UDQM,
 	output		          		DRAM_WE_N,
 
-	// //////////// Video-In //////////
-	// input 		          		TD_CLK27,
-	// input 		     [7:0]		TD_DATA,
-	// input 		          		TD_HS,
-	// output		          		TD_RESET_N,
-	// input 		          		TD_VS,
-
-	// //////////// VGA //////////
-	// output		          		VGA_BLANK_N,
-	// output		     [7:0]		VGA_B,
-	// output		          		VGA_CLK,
-	// output		     [7:0]		VGA_G,
-	// output		          		VGA_HS,
-	// output		     [7:0]		VGA_R,
-	// output		          		VGA_SYNC_N,
-	// output		          		VGA_VS,
-
 	//////////// Audio //////////
 	input 		          		AUD_ADCDAT,
 	inout 		          		AUD_ADCLRCK,
@@ -65,12 +48,6 @@ module Audio_Codec(
 	output		          		AUD_DACDAT,
 	inout 		          		AUD_DACLRCK,
 	output		          		AUD_XCK,
-
-	// //////////// PS2 //////////
-	// inout 		          		PS2_CLK,
-	// inout 		          		PS2_CLK2,
-	// inout 		          		PS2_DAT,
-	// inout 		          		PS2_DAT2,
 
 	//////////// ADC //////////
 	output		          		ADC_CONVST,
@@ -82,9 +59,6 @@ module Audio_Codec(
 	output		          		FPGA_I2C_SCLK,
 	inout 		          		FPGA_I2C_SDAT
 
-	// //////////// IR //////////
-	// input 		          		IRDA_RXD,
-	// output		          		IRDA_TXD
 );
 
 // Creating states
