@@ -88,13 +88,13 @@ reg SDAT;
 wire mem_clk;
 wire clk;
 wire clk12;
-wire [7:0] Chip_Address;
-wire [7:0] Data1;
-wire [7:0] Data2;
+wire [8:0] Chip_Address;
+wire [8:0] Data1;
+wire [8:0] Data2;
 reg clockHold;
-assign Chip_Address = 8'b0011_0100;
-assign Data1 = 8'b0001_1110;
-assign Data2 = 8'b0000_0000;
+assign Chip_Address = 9'b001101000;
+assign Data1 = 9'b000111100;
+assign Data2 = 9'b000000000;
 
 
 
@@ -127,7 +127,7 @@ always @(posedge clk or negedge KEY[0])
         current_state = next_state;
 
 // Next State Logic
-always @(*)
+always @(posedge clk or negedge KEY[0])
     begin
         case (current_state)
             Wait_For_Transmit: 
@@ -191,11 +191,11 @@ reg [3:0] Q;
 always @(posedge clk)
 begin
     if (current_state == Send_Address && Q == 0)
-        Q <= 7;
+        Q <= 8;
 	else if (current_state == Send_Data_1 && Q == 0)
-		Q <= 7;
+		Q <= 8;
 	else if (current_state == Send_Data_2 && Q == 0)
-		Q <= 7;
+		Q <= 8;
     else if (Q != 0)
         Q <= Q - 1;
     else
@@ -210,7 +210,7 @@ begin
 		clockHold = clk; //should be the divided clock
 end
 // Output Logic
-always @(negedge clk or negedge KEY[0])
+always @(posedge clk or posedge KEY[0])
     begin
         case (current_state)
             Wait_For_Transmit: 
@@ -220,16 +220,18 @@ always @(negedge clk or negedge KEY[0])
             end
             Start_Condition:
             begin
+				ACK_cycle = 0;
 				SDAT = 0;
             end
             Send_Address:
             begin
+				ACK_cycle = 0;
 				SDAT = Chip_Address[Q];
             end
             ACK_1:
             begin
 				ACK_cycle = 1;
-				if(returned_ack_n == 1)
+				if(returned_ack_n == 0)
 					ACK_received = 3'b001;
 				else
 					ACK_received = 3'b000;
@@ -242,7 +244,7 @@ always @(negedge clk or negedge KEY[0])
             ACK_2:
             begin
 				ACK_cycle = 1;
-				if(returned_ack_n == 1)
+				if(returned_ack_n == 0)
 					ACK_received = 3'b010;
 				else
 					ACK_received = 3'b000;
@@ -255,7 +257,7 @@ always @(negedge clk or negedge KEY[0])
 			ACK_3:
 			begin
 				ACK_cycle = 1;
-				if(returned_ack_n == 1)
+				if(returned_ack_n == 0)
 					ACK_received = 3'b100;
 				else
 					ACK_received = 3'b000;
@@ -268,5 +270,5 @@ always @(negedge clk or negedge KEY[0])
         endcase
     end
 	assign FPGA_I2C_SCLK = clockHold;
-
+	assign AUD_XCK = clk12;
 endmodule
