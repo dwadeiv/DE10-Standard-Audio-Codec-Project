@@ -87,6 +87,7 @@ wire returned_ack_n;
 reg SDAT;
 wire mem_clk;
 wire clk;
+wire clk12;
 wire [7:0] Chip_Address;
 wire [7:0] Data1;
 wire [7:0] Data2;
@@ -106,10 +107,10 @@ assign Data2 = 8'b0000_0000;
 audio_pll audio_pll(
 	.refclk   (CLOCK_50),  
 	.rst      (~KEY[0]),  
-	.outclk_0 (clk)
+	.outclk_0 (clk12)
 );
 
-
+clk_divider clk_divider(clk12, clk);
 
 Audio_Tri_State Audio_Tri_State(
 	.AUD_SDAT(FPGA_I2C_SDAT),

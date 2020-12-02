@@ -405,12 +405,6 @@ set_location_assignment PIN_W21 -to IRDA_TXD
 #============================================================
 
 
-set_global_assignment -name VERILOG_FILE ../src/Audio_Tri_State.v
-set_global_assignment -name VERILOG_FILE ../src/Audio_Codec.v
-set_global_assignment -name SDC_FILE Audio_Codec.SDC
-set_global_assignment -name QIP_FILE audio_pll.qip
-set_global_assignment -name SIP_FILE audio_pll.sip
-set_global_assignment -name QIP_FILE audio_memory.qip
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -418,10 +412,8 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp2.stp
-set_global_assignment -name SIGNALTAP_FILE stp2.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
@@ -500,5 +492,14 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -t
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE ../src/clk_divider.v
+set_global_assignment -name VERILOG_FILE ../src/Audio_Tri_State.v
+set_global_assignment -name VERILOG_FILE ../src/Audio_Codec.v
+set_global_assignment -name SDC_FILE Audio_Codec.SDC
+set_global_assignment -name QIP_FILE audio_pll.qip
+set_global_assignment -name SIP_FILE audio_pll.sip
+set_global_assignment -name QIP_FILE audio_memory.qip
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
 set_global_assignment -name SLD_FILE db/stp2_auto_stripped.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
