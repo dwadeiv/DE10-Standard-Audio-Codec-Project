@@ -141,7 +141,7 @@ begin
 	if (current_state == Wait_For_Transmit || current_state == Stop_Condition || current_state == Start_Condition)
 		clockHold = 1;
 	else
-		clockHold = clk; //should be the divided clock
+		clockHold = #1 clk; //should be the divided clock
 end
 // Output Logic
 always @(posedge clk or negedge KEY)
