@@ -114,13 +114,13 @@ audio_pll audio_pll(
 );
 
 
+I2Cstate I2Cstate(
+	.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
+	.FPGA_I2C_SDAT (FPGA_I2C_SDAT),
+	.clk (clk),
+	.KEY (KEY[0])
+);
 
-// Audio_Tri_State Audio_Tri_State(
-// 	.AUD_SDAT(FPGA_I2C_SDAT), // connect to some wire then assign sdat to the wire ? hiuz : wire
-// 	.returned_ack_n(returned_ack_n),
-// 	.I2C_data_to_send(SDAT),
-// 	.ACK_cycle(ACK_cycle)
-// );
 
 // Current State Logic
 always @(posedge clk or negedge KEY[0])
@@ -129,147 +129,5 @@ always @(posedge clk or negedge KEY[0])
     else
         current_state = next_state;
 
-// Next State Logic
-always @(*)
-    begin
-        case (current_state)
-            Wait_For_Transmit: 
-            begin
-				next_state = Start_Condition;
-            end
-            Start_Condition:
-            begin
-				next_state = Send_Address;
-            end
-            Send_Address:
-            begin
-				if (Q == 0)
-					next_state = ACK_1;
-				else
-					next_state = Send_Address;
-            end
-            ACK_1:
-            begin
-				if (ACK_received == 3'b001)
-					next_state = Send_Data_1;
-				else
-					next_state = Wait_For_Transmit;
-            end
-            Send_Data_1:
-            begin
-				if (Q == 0)
-					next_state = ACK_2;
-				else
-					next_state = Send_Data_1;
-			end
-            ACK_2:
-            begin
-				if (ACK_received == 3'b010)
-					next_state = Send_Data_2;
-				else
-					next_state = Wait_For_Transmit;
-            end
-			Send_Data_2:
-            begin
-				if (Q == 0)
-					next_state = ACK_3;
-				else
-					next_state = Send_Data_2;
-			end
-			ACK_3:
-			begin
-				if (ACK_received == 3'b100)
-					next_state = Stop_Condition;
-				else
-					next_state = Wait_For_Transmit;
-			end
-			Stop_Condition:
-			begin
-				next_state = Wait_For_Transmit;
-			end
-        endcase
-    end
-
-reg [3:0] Q;
-always @(posedge clk)
-begin
-    if (current_state == Send_Address && Q == 0)
-        Q <= 7;
-	else if (current_state == Send_Data_1 && Q == 0)
-		Q <= 7;
-	else if (current_state == Send_Data_2 && Q == 0)
-		Q <= 7;
-    else if (Q != 0)
-        Q <= Q - 1;
-    else
-        Q <= 0;
-end
-always @(clk)
-begin
-	// Multiplexer for SCLK
-	if (current_state == Wait_For_Transmit || current_state == Stop_Condition)
-		clockHold = 1;
-	else
-		clockHold = clk; //should be the divided clock
-end
-// Output Logic
-always @(negedge clk or negedge KEY[0])
-    begin
-        case (current_state)
-            Wait_For_Transmit: 
-            begin
-				// ACK_cycle = 0;
-				SDAT = 1;
-            end
-            Start_Condition:
-            begin
-				SDAT = 0;
-            end
-            Send_Address:
-            begin
-				SDAT = Chip_Address[Q];
-            end
-            ACK_1:
-            begin
-				// ACK_cycle = 1;
-				if(returned_ack_n == 0)
-					ACK_received = 3'b001;
-				else
-					ACK_received = 3'b000;
-            end
-            Send_Data_1:
-            begin
-				// ACK_cycle = 0;
-				SDAT = Data1[Q];
-			end
-            ACK_2:
-            begin
-				// ACK_cycle = 1;
-				if(returned_ack_n == 0)
-					ACK_received = 3'b010;
-				else
-					ACK_received = 3'b000;
-            end
-			Send_Data_2:
-            begin
-				// ACK_cycle = 0;
-				SDAT = Data2[Q];
-			end
-			ACK_3:
-			begin
-				// ACK_cycle = 1;
-				if(returned_ack_n == 0)
-					ACK_received = 3'b100;
-				else
-					ACK_received = 3'b000;
-			end
-			Stop_Condition:
-			begin
-				// ACK_cycle = 0;
-				SDAT = 1;
-			end
-        endcase
-    end
-	assign FPGA_I2C_SCLK = clockHold;
 
 endmodule
