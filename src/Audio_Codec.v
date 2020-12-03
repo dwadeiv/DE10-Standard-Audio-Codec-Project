@@ -77,28 +77,8 @@ parameter Stop_Condition = 4'b1000;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [3:0] next_state;
-reg [3:0] current_state;
-reg [15:0] mem;
-reg [1:0] mem_counter;
-reg [2:0] ACK_received;
-reg ACK_cycle;
-wire returned_ack_n;
-reg SDAT;
-wire mem_clk;
-wire clk;
+reg [3:0] next_state;wire clk;
 wire [7:0] Chip_Address;
-wire [7:0] Data1;
-wire [7:0] Data2;
-reg clockHold;
-assign Chip_Address = 8'b0011_0100;
-assign Data1 = 8'b0001_1110;
-assign Data2 = 8'b0000_0000;
-
-// assign SDAT = FPGA_I2C_SDAT;
-assign returned_ack_n = FPGA_I2C_SDAT; // only read this during the ACK_cycle 
-assign FPGA_I2C_SDAT = SDAT ? 1'bZ : SDAT;
-
 
 
 
@@ -122,12 +102,7 @@ I2Cstate I2Cstate(
 );
 
 
-// Current State Logic
-always @(posedge clk or negedge KEY[0])
-    if (KEY[0] == 0)
-        current_state = Wait_For_Transmit;
-    else
-        current_state = next_state;
+
 
 
 endmodule
