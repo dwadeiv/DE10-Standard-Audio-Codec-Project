@@ -1,5 +1,5 @@
 Flow report for Audio_Codec
-Thu Dec 03 01:40:21 2020
+Thu Dec 03 16:39:15 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Dec 03 01:40:21 2020           ;
+; Flow Status                     ; Successful - Thu Dec 03 16:39:15 2020           ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                   ; Audio_Codec                                     ;
 ; Top-level Entity Name           ; Audio_Codec                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 423 / 41,910 ( 1 % )                            ;
-; Total registers                 ; 796                                             ;
+; Logic utilization (in ALMs)     ; 429 / 41,910 ( 1 % )                            ;
+; Total registers                 ; 808                                             ;
 ; Total pins                      ; 121 / 499 ( 24 % )                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 1,441,792 / 5,662,720 ( 25 % )                  ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/03/2020 01:35:05 ;
+; Start date & time ; 12/03/2020 16:35:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Audio_Codec         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                                                                                                ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 963354558519.160698450418500                                                                                         ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 963354558519.160703850527532                                                                                         ; --            ; --          ; --               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                   ; --            ; --          ; tb               ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                                                                                                   ; --            ; --          ; eda_simulation   ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                                                                          ; --            ; --          ; eda_simulation   ;
@@ -140,12 +140,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:17     ; 1.0                     ; 4933 MB             ; 00:02:02                           ;
-; Fitter               ; 00:02:47     ; 1.2                     ; 6674 MB             ; 00:05:03                           ;
-; Assembler            ; 00:00:22     ; 1.0                     ; 4882 MB             ; 00:00:20                           ;
-; Timing Analyzer      ; 00:00:31     ; 1.7                     ; 5226 MB             ; 00:00:43                           ;
-; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 4751 MB             ; 00:00:07                           ;
-; Total                ; 00:05:04     ; --                      ; --                  ; 00:08:15                           ;
+; Analysis & Synthesis ; 00:00:50     ; 1.0                     ; 4919 MB             ; 00:01:23                           ;
+; Fitter               ; 00:02:11     ; 1.2                     ; 6666 MB             ; 00:04:08                           ;
+; Assembler            ; 00:00:17     ; 1.0                     ; 4885 MB             ; 00:00:15                           ;
+; Timing Analyzer      ; 00:00:27     ; 1.6                     ; 5227 MB             ; 00:00:38                           ;
+; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 4751 MB             ; 00:00:06                           ;
+; Total                ; 00:03:51     ; --                      ; --                  ; 00:06:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

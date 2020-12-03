@@ -7,7 +7,7 @@ DE10 Standard board. Adapted from ECEN 2350.
 module clk_divider(input main_clock, output CLOCK_1_HZ );
 
 
-reg [23:0] divide = 100; 
+reg [23:0] divide = 25; 
 
 
 

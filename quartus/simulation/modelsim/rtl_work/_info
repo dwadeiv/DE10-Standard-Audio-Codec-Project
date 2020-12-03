@@ -10,32 +10,32 @@ z2
 cModel Technology
 Z0 dD:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim
 vAudio_Codec
-Z1 !s110 1607010758
+Z1 !s110 1607039471
 !i10b 1
-!s100 YhGBk3[1KW@NM1f8V@VGJ1
+!s100 ^ln>;:1]Ig9hm<o9QI@1_2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IZ?N8I42m1PlPMZN>CgzQh1
+I;Mhm2<QkYbn<e0Do2z>jO0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1606985751
+w1607038495
 8D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v
 FD:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v
 !i122 3
 L0 6 104
-Z5 OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1607010758.000000
+Z5 !s108 1607039471.000000
 !s107 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src|D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v|
 !i113 1
-Z7 o-vlog01compat -work work
-Z8 !s92 -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src
-Z9 tCvgOpt 0
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src
+Z8 tCvgOpt 0
 n@audio_@codec
 vaudio_pll
-!s110 1607010757
+Z9 !s110 1607039470
 !i10b 1
 !s100 DI?QZY[WgY^I<6o3mA]0J3
 R2
@@ -47,29 +47,29 @@ w1606712696
 FD:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo
 !i122 0
 L0 32 264
-R5
+R4
 r1
 !s85 0
 31
-Z10 !s108 1607010757.000000
+Z10 !s108 1607039470.000000
 !s107 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo|
 !s90 -reportprogress|300|D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo|
 !i113 1
-R9
+R8
 vclk_divider
-R1
+R9
 !i10b 1
 !s100 cWRI?cKgiY`<<<AUOfdJl1
 R2
 IkmPlRh4KThXhOF>JVV@CF0
 R3
 R0
-R4
+w1607036314
 8D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v
 FD:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v
 !i122 1
 L0 7 28
-R5
+R4
 r1
 !s85 0
 31
@@ -77,55 +77,55 @@ R10
 !s107 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src|D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v|
 !i113 1
+R6
 R7
 R8
-R9
 vI2Cstate
 R1
 !i10b 1
-!s100 ^nX8boZkPMh`emUf:U^=P2
+!s100 2a3QN]bhK:4G=Snm2igM=0
 R2
-I5AXg;22:NWTEIJO;OPjN73
+I^Y8JXz2:?2DDQ1n:]bTdW1
 R3
 R0
-w1607010703
+w1607039449
 8D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v
 FD:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v
 !i122 2
-L0 1 207
-R5
+L0 1 247
+R4
 r1
 !s85 0
 31
-R6
+R10
 !s107 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src|D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v|
 !i113 1
+R6
 R7
 R8
-R9
 n@i2@cstate
 vtb
-!s110 1607010759
+R1
 !i10b 1
-!s100 @mN4_^16jS^Gj9DYEbIhP3
+!s100 XPX2gQM4`PG?X4BgN@MU@1
 R2
-IL>GZzJmecjBS0oR3CQ0KZ1
+I6Xj1MkbKUoA^Gd>?=T`]R0
 R3
 R0
-R4
+w1607039127
 8D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v
 FD:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v
 !i122 4
 L0 3 41
-R5
+R4
 r1
 !s85 0
 31
-R6
+R5
 !s107 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src|D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v|
 !i113 1
-R7
+R6
 !s92 -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src
-R9
+R8

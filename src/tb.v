@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 100 ps
 module tb();
-reg  KEY;
+reg  reset_n;
 wire FPGA_I2C_SCLK;
 wire FPGA_I2C_SDAT;
 reg clk;
@@ -10,7 +10,7 @@ I2Cstate U0(
 	.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
 	.FPGA_I2C_SDAT (FPGA_I2C_SDAT),
 	.clk (clk),
-	.KEY (KEY)
+	.reset_n (reset_n)
 );
 
 
@@ -24,16 +24,16 @@ initial
     begin
         //give initial values and trigger reset cycle
         clk = 0;
-        KEY = 0;
+        reset_n = 0;
         #20 
-        KEY = 1;
+        reset_n = 1;
         $display ($time ,"Starting Simulation of Lab 1.");
         #20000 
-        KEY = 0;
+        reset_n = 0;
        
         #25000
             //Start again
-        KEY = 1; 
+        reset_n = 1; 
         
        
         #35000

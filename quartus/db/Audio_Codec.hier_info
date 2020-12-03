@@ -154,12 +154,12 @@ CLOCK_1_HZ <= slow_clock.DB_MAX_OUTPUT_PORT_TYPE
 |Audio_Codec|I2Cstate:I2Cstate
 FPGA_I2C_SCLK <= clockHold.DB_MAX_OUTPUT_PORT_TYPE
 FPGA_I2C_SDAT <> FPGA_I2C_SDAT
-clk => clockHold.DATAA
-clk => Q[0].CLK
-clk => Q[1].CLK
-clk => Q[2].CLK
-clk => Q[3].CLK
-clk => current_state~1.DATAIN
-KEY => current_state~3.DATAIN
+clk => clkClk.CLK
+clk => dataClk.CLK
+clk => offsetClk[0].CLK
+clk => offsetClk[1].CLK
+reset_n => clkClk.ACLR
+reset_n => dataClk.PRESET
+reset_n => current_state~3.DATAIN
 
 

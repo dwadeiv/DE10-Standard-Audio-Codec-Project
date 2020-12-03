@@ -99,7 +99,7 @@ I2Cstate I2Cstate(
 	.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
 	.FPGA_I2C_SDAT (FPGA_I2C_SDAT),
 	.clk (clk),
-	.KEY (KEY[0])
+	.reset_n (KEY[0])
 );
 
 

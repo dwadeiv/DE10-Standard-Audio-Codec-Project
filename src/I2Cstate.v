@@ -2,7 +2,7 @@ module I2Cstate(
     output		          		FPGA_I2C_SCLK,
 	inout 		          		FPGA_I2C_SDAT,
     input                       clk,
-    input                       KEY
+    input                       reset_n
 
 );
 
@@ -41,17 +41,57 @@ reg [3:0] Q;
 assign Chip_Address = 8'b0011_0100;
 assign Data1 = 8'b0001_1110;
 assign Data2 = 8'b0000_0000;
+reg [1:0] offsetClk;
+reg dataClk;
+reg clkClk;
 
 // assign SDAT = FPGA_I2C_SDAT;
 assign returned_ack_n = FPGA_I2C_SDAT; // only read this during the ACK_cycle 
 assign FPGA_I2C_SDAT = ACK_cycle ? 1'bZ : SDAT;
 
 
+//offset clock counter for sda to change at low scl
+always @ (posedge clk or negedge reset_n)
+begin
+    if (reset_n == 0)
+        begin
+            offsetClk = 0;
+        end    
+    if(offsetClk == 3)
+    begin
+        offsetClk = 0;
+    end
+    else
+    begin
+        offsetClk = offsetClk + 1;
+    end
+end
+
+always @ (posedge clk or negedge reset_n)
+begin
+    if (reset_n == 0)
+        begin
+            dataClk = 1;
+            clkClk = 0;
+        end
+    
+    else if(offsetClk == 0 || offsetClk == 2)
+        begin
+        clkClk = ~clkClk;
+        end
+    else if(offsetClk == 1 || offsetClk == 3)
+        begin
+        dataClk = ~dataClk;
+        end
+
+
+end
+
 
 
 // Current State Logic
-always @(posedge clk or negedge KEY)
-    if (KEY == 0)
+always @(posedge dataClk or negedge reset_n)
+    if (reset_n == 0)
         current_state = Wait_For_Transmit;
     else
         current_state = next_state;
@@ -122,7 +162,7 @@ always @(*)
     end
 
 
-always @(posedge clk)
+always @(posedge dataClk)
 begin
     if (current_state == Send_Address && Q == 0)
         Q <= 7;
@@ -141,10 +181,10 @@ begin
 	if (current_state == Wait_For_Transmit || current_state == Stop_Condition || current_state == Start_Condition)
 		clockHold = 1;
 	else
-		clockHold = #1 clk; //should be the divided clock
+		clockHold = clkClk; //should be the divided clock
 end
 // Output Logic
-always @(posedge clk or negedge KEY)
+always @(posedge dataClk or negedge reset_n)
     begin
         case (current_state)
             Wait_For_Transmit: 
