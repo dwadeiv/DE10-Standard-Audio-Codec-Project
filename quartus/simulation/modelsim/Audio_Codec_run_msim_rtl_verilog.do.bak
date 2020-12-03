@@ -1,0 +1,21 @@
+transcript on
+if ![file isdirectory Audio_Codec_iputf_libs] {
+	file mkdir Audio_Codec_iputf_libs
+}
+
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+
+
+vlog "D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo"
+
+vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v}
+vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v}
+

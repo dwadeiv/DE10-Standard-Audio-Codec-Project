@@ -86,14 +86,15 @@ wire [7:0] Chip_Address;
 //=======================================================
 //  Structural coding
 //=======================================================
-
+/*
 audio_pll audio_pll(
 	.refclk   (CLOCK_50),  
 	.rst      (~KEY[0]),  
 	.outclk_0 (clk)
 );
+*/
 
-
+clk_divider clk_divider(CLOCK_50, clk );
 I2Cstate I2Cstate(
 	.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
 	.FPGA_I2C_SDAT (FPGA_I2C_SDAT),

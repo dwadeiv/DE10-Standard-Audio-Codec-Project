@@ -3,6 +3,7 @@ module I2Cstate(
 	inout 		          		FPGA_I2C_SDAT,
     input                       clk,
     input                       KEY
+
 );
 
 
@@ -36,13 +37,14 @@ wire [7:0] Chip_Address;
 wire [7:0] Data1;
 wire [7:0] Data2;
 reg clockHold;
+reg [3:0] Q;
 assign Chip_Address = 8'b0011_0100;
 assign Data1 = 8'b0001_1110;
 assign Data2 = 8'b0000_0000;
 
 // assign SDAT = FPGA_I2C_SDAT;
 assign returned_ack_n = FPGA_I2C_SDAT; // only read this during the ACK_cycle 
-assign FPGA_I2C_SDAT = SDAT ? 1'bZ : SDAT;
+assign FPGA_I2C_SDAT = ACK_cycle ? 1'bZ : SDAT;
 
 
 
@@ -119,7 +121,7 @@ always @(*)
         endcase
     end
 
-reg [3:0] Q;
+
 always @(posedge clk)
 begin
     if (current_state == Send_Address && Q == 0)
@@ -136,31 +138,33 @@ end
 always @(clk)
 begin
 	// Multiplexer for SCLK
-	if (current_state == Wait_For_Transmit || current_state == Stop_Condition)
+	if (current_state == Wait_For_Transmit || current_state == Stop_Condition || current_state == Start_Condition)
 		clockHold = 1;
 	else
-		clockHold = clk; //should be the divided clock
+		clockHold = #1 clk; //should be the divided clock
 end
 // Output Logic
-always @(negedge clk or negedge KEY)
+always @(posedge clk or negedge KEY)
     begin
         case (current_state)
             Wait_For_Transmit: 
             begin
-				// ACK_cycle = 0;
+				ACK_cycle = 0;
 				SDAT = 1;
             end
             Start_Condition:
             begin
-				SDAT = 0;
+				ACK_cycle = 0;
+                SDAT = 0;
             end
             Send_Address:
             begin
-				SDAT = Chip_Address[Q];
+				ACK_cycle = 0;
+                SDAT = Chip_Address[Q];
             end
             ACK_1:
             begin
-				// ACK_cycle = 1;
+				ACK_cycle = 1;
 				if(returned_ack_n == 0)
 					ACK_received = 3'b001;
 				else
@@ -168,12 +172,12 @@ always @(negedge clk or negedge KEY)
             end
             Send_Data_1:
             begin
-				// ACK_cycle = 0;
+				ACK_cycle = 0;
 				SDAT = Data1[Q];
 			end
             ACK_2:
             begin
-				// ACK_cycle = 1;
+				ACK_cycle = 1;
 				if(returned_ack_n == 0)
 					ACK_received = 3'b010;
 				else
@@ -181,12 +185,12 @@ always @(negedge clk or negedge KEY)
             end
 			Send_Data_2:
             begin
-				// ACK_cycle = 0;
+			    ACK_cycle = 0;
 				SDAT = Data2[Q];
 			end
 			ACK_3:
 			begin
-				// ACK_cycle = 1;
+				ACK_cycle = 1;
 				if(returned_ack_n == 0)
 					ACK_received = 3'b100;
 				else
@@ -194,7 +198,7 @@ always @(negedge clk or negedge KEY)
 			end
 			Stop_Condition:
 			begin
-				// ACK_cycle = 0;
+				ACK_cycle = 0;
 				SDAT = 1;
 			end
         endcase

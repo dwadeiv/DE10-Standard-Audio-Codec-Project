@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Thu Dec 03 00:00:26 2020
+Analysis & Synthesis Status : Successful - Thu Dec 03 01:36:22 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 Revision Name : Audio_Codec
 Top-level Entity Name : Audio_Codec
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 693
+Total registers : 773
 Total pins : 121
 Total virtual pins : 0
-Total block memory bits : 180,224
+Total block memory bits : 1,441,792
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1
+Total PLLs : 0
 Total DLLs : 0

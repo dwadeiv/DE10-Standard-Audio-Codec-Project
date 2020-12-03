@@ -1,5 +1,5 @@
 Flow report for Audio_Codec
-Thu Dec 03 00:03:35 2020
+Thu Dec 03 01:40:21 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -41,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Dec 03 00:03:05 2020           ;
+; Flow Status                     ; Successful - Thu Dec 03 01:40:21 2020           ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                   ; Audio_Codec                                     ;
 ; Top-level Entity Name           ; Audio_Codec                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 354 / 41,910 ( < 1 % )                          ;
-; Total registers                 ; 716                                             ;
+; Logic utilization (in ALMs)     ; 423 / 41,910 ( 1 % )                            ;
+; Total registers                 ; 796                                             ;
 ; Total pins                      ; 121 / 499 ( 24 % )                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 180,224 / 5,662,720 ( 3 % )                     ;
+; Total block memory bits         ; 1,441,792 / 5,662,720 ( 25 % )                  ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                                 ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                   ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                   ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                   ;
 ; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                   ;
-; Total PLLs                      ; 1 / 15 ( 7 % )                                  ;
+; Total PLLs                      ; 0 / 15 ( 0 % )                                  ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
 +---------------------------------+-------------------------------------------------+
 
@@ -68,62 +68,71 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2020 23:59:12 ;
+; Start date & time ; 12/03/2020 01:35:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Audio_Codec         ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                                         ;
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; Assignment Name                     ; Value                                                                                                             ; Default Value ; Entity Name ; Section Id       ;
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 963354558519.160697875229952                                                                                      ; --            ; --          ; --               ;
-; ENABLE_SIGNALTAP                    ; On                                                                                                                ; --            ; --          ; --               ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                                ; --            ; --          ; --               ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                                 ; --            ; --          ; --               ;
-; MISC_FILE                           ; audio_pll.cmp                                                                                                     ; --            ; --          ; --               ;
-; MISC_FILE                           ; audio_pll_sim/audio_pll.vo                                                                                        ; --            ; --          ; --               ;
-; MISC_FILE                           ; audio_memory_bb.v                                                                                                 ; --            ; --          ; --               ;
-; MISC_FILE                           ; audio_memory_syn.v                                                                                                ; --            ; --          ; --               ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                                            ; --            ; --          ; Top              ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                                            ; --            ; --          ; Top              ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                                            ; --            ; --          ; Top              ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                               ; --            ; --          ; --               ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                             ; --            ; --          ; --               ;
-; SLD_FILE                            ; db/stp2_auto_stripped.stp                                                                                         ; --            ; --          ; --               ;
-; SLD_NODE_CREATOR_ID                 ; 110                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                                                     ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                           ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                                                           ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                     ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                        ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                    ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                                                 ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                                                         ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=2                                                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                                                          ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                                                                ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,basic,1,                                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                     ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=16384                                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=16384                                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=11                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=11                                                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=11                                                                                     ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=94                                                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SPD_FILE                            ; audio_pll.spd                                                                                                     ; --            ; --          ; --               ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                                                                ; --            ; --          ; --               ;
-; USE_SIGNALTAP_FILE                  ; stp2.stp                                                                                                          ; --            ; --          ; --               ;
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                             ;
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                      ; Value                                                                                                                ; Default Value ; Entity Name ; Section Id       ;
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 963354558519.160698450418500                                                                                         ; --            ; --          ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                   ; --            ; --          ; tb               ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                                                                                                   ; --            ; --          ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                                                                          ; --            ; --          ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                                                                            ; <None>        ; --          ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                                                                      ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; ../src/tb.v                                                                                                          ; --            ; --          ; tb               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb                                                                                                                   ; --            ; --          ; tb               ;
+; EDA_TEST_BENCH_NAME                  ; tb                                                                                                                   ; --            ; --          ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                                                                                                                 ; --            ; --          ; eda_simulation   ;
+; ENABLE_SIGNALTAP                     ; On                                                                                                                   ; --            ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                                                                                   ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                                                                    ; --            ; --          ; --               ;
+; MISC_FILE                            ; audio_pll.cmp                                                                                                        ; --            ; --          ; --               ;
+; MISC_FILE                            ; audio_pll_sim/audio_pll.vo                                                                                           ; --            ; --          ; --               ;
+; MISC_FILE                            ; audio_memory_bb.v                                                                                                    ; --            ; --          ; --               ;
+; MISC_FILE                            ; audio_memory_syn.v                                                                                                   ; --            ; --          ; --               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                                                                               ; --            ; --          ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                                                                               ; --            ; --          ; Top              ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                                                                               ; --            ; --          ; Top              ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                                                                                  ; --            ; --          ; --               ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                                ; --            ; --          ; --               ;
+; SLD_FILE                             ; db/stp2_auto_stripped.stp                                                                                            ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                  ; 110                                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                 ; sld_signaltap                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_INFO=805334528                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_POWER_UP_TRIGGER=0                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                       ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_BITS=11                                                                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_BUFFER_FULL_STOP=1                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INCREMENTAL_ROUTING=1                                                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL=2                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_IN_ENABLED=0                                                                                             ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_PIPELINE=0                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_RAM_PIPELINE=0                                                                                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_COUNTER_PIPELINE=0                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,basic,1,                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=11                                                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_BITS=11                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_BITS=11                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK_LENGTH=97                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SEGMENT_SIZE=131072                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SAMPLE_DEPTH=131072                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SPD_FILE                             ; audio_pll.spd                                                                                                        ; --            ; --          ; --               ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                                                                                   ; --            ; --          ; --               ;
+; USE_SIGNALTAP_FILE                   ; stp2.stp                                                                                                             ; --            ; --          ; --               ;
++--------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -131,11 +140,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:12     ; 1.0                     ; 4915 MB             ; 00:02:04                           ;
-; Fitter               ; 00:02:14     ; 1.1                     ; 6705 MB             ; 00:03:59                           ;
-; Assembler            ; 00:00:18     ; 1.0                     ; 4855 MB             ; 00:00:17                           ;
-; Timing Analyzer      ; 00:00:28     ; 1.2                     ; 5218 MB             ; 00:00:30                           ;
-; Total                ; 00:04:12     ; --                      ; --                  ; 00:06:50                           ;
+; Analysis & Synthesis ; 00:01:17     ; 1.0                     ; 4933 MB             ; 00:02:02                           ;
+; Fitter               ; 00:02:47     ; 1.2                     ; 6674 MB             ; 00:05:03                           ;
+; Assembler            ; 00:00:22     ; 1.0                     ; 4882 MB             ; 00:00:20                           ;
+; Timing Analyzer      ; 00:00:31     ; 1.7                     ; 5226 MB             ; 00:00:43                           ;
+; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 4751 MB             ; 00:00:07                           ;
+; Total                ; 00:05:04     ; --                      ; --                  ; 00:08:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -148,6 +158,7 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DESKTOP-M7DI2RK  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-M7DI2RK  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-M7DI2RK  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-M7DI2RK  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -158,6 +169,7 @@ quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c A
 quartus_fit --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_asm --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
 quartus_sta Audio_Codec -c Audio_Codec
+quartus_eda --read_settings_files=off --write_settings_files=off Audio_Codec -c Audio_Codec
 
 
 
