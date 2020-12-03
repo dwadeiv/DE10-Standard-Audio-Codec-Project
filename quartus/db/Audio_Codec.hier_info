@@ -120,7 +120,7 @@ ADC_DIN <= <GND>
 ADC_DOUT => ~NO_FANOUT~
 ADC_SCLK <= <GND>
 FPGA_I2C_SCLK <= clockHold.DB_MAX_OUTPUT_PORT_TYPE
-FPGA_I2C_SDAT <> Audio_Tri_State:Audio_Tri_State.AUD_SDAT
+FPGA_I2C_SDAT <> FPGA_I2C_SDAT
 
 
 |Audio_Codec|audio_pll:audio_pll
@@ -307,12 +307,5 @@ extclk_out[0] <= <GND>
 extclk_out[1] <= <GND>
 cascade_out[0] <= <GND>
 zdbfbclk <> <GND>
-
-
-|Audio_Codec|Audio_Tri_State:Audio_Tri_State
-AUD_SDAT <> AUD_SDAT
-returned_ack_n <= returned_ack_n.DB_MAX_OUTPUT_PORT_TYPE
-I2C_data_to_send => AUD_SDAT.DATAIN
-ACK_cycle => AUD_SDAT.OE
 
 

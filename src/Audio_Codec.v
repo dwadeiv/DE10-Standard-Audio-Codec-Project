@@ -95,6 +95,10 @@ assign Chip_Address = 8'b0011_0100;
 assign Data1 = 8'b0001_1110;
 assign Data2 = 8'b0000_0000;
 
+// assign SDAT = FPGA_I2C_SDAT;
+assign returned_ack_n = FPGA_I2C_SDAT; // only read this during the ACK_cycle 
+assign FPGA_I2C_SDAT = SDAT ? 1'bZ : SDAT;
+
 
 
 
@@ -111,12 +115,12 @@ audio_pll audio_pll(
 
 
 
-Audio_Tri_State Audio_Tri_State(
-	.AUD_SDAT(FPGA_I2C_SDAT),
-	.returned_ack_n(returned_ack_n),
-	.I2C_data_to_send(SDAT),
-	.ACK_cycle(ACK_cycle)
-);
+// Audio_Tri_State Audio_Tri_State(
+// 	.AUD_SDAT(FPGA_I2C_SDAT), // connect to some wire then assign sdat to the wire ? hiuz : wire
+// 	.returned_ack_n(returned_ack_n),
+// 	.I2C_data_to_send(SDAT),
+// 	.ACK_cycle(ACK_cycle)
+// );
 
 // Current State Logic
 always @(posedge clk or negedge KEY[0])
@@ -214,7 +218,7 @@ always @(negedge clk or negedge KEY[0])
         case (current_state)
             Wait_For_Transmit: 
             begin
-				ACK_cycle = 0;
+				// ACK_cycle = 0;
 				SDAT = 1;
             end
             Start_Condition:
@@ -227,41 +231,41 @@ always @(negedge clk or negedge KEY[0])
             end
             ACK_1:
             begin
-				ACK_cycle = 1;
-				if(returned_ack_n == 1)
+				// ACK_cycle = 1;
+				if(returned_ack_n == 0)
 					ACK_received = 3'b001;
 				else
 					ACK_received = 3'b000;
             end
             Send_Data_1:
             begin
-				ACK_cycle = 0;
+				// ACK_cycle = 0;
 				SDAT = Data1[Q];
 			end
             ACK_2:
             begin
-				ACK_cycle = 1;
-				if(returned_ack_n == 1)
+				// ACK_cycle = 1;
+				if(returned_ack_n == 0)
 					ACK_received = 3'b010;
 				else
 					ACK_received = 3'b000;
             end
 			Send_Data_2:
             begin
-				ACK_cycle = 0;
+				// ACK_cycle = 0;
 				SDAT = Data2[Q];
 			end
 			ACK_3:
 			begin
-				ACK_cycle = 1;
-				if(returned_ack_n == 1)
+				// ACK_cycle = 1;
+				if(returned_ack_n == 0)
 					ACK_received = 3'b100;
 				else
 					ACK_received = 3'b000;
 			end
 			Stop_Condition:
 			begin
-				ACK_cycle = 0;
+				// ACK_cycle = 0;
 				SDAT = 1;
 			end
         endcase
