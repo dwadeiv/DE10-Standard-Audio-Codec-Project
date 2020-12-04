@@ -3,7 +3,7 @@ module I2Cstate(
 	inout 		          		FPGA_I2C_SDAT,
     input                       clk,
     input                       reset_n
-
+    
 );
 
 
@@ -57,7 +57,7 @@ begin
         begin
             offsetClk = 0;
         end    
-    if(offsetClk == 3)
+    else if(offsetClk == 3)
     begin
         offsetClk = 0;
     end
@@ -90,7 +90,7 @@ end
 
 
 // Current State Logic
-always @(posedge dataClk or negedge reset_n)
+always @(negedge dataClk or negedge reset_n)
     if (reset_n == 0)
         current_state = Wait_For_Transmit;
     else
@@ -162,7 +162,7 @@ always @(*)
     end
 
 
-always @(posedge dataClk)
+always @(posedge clkClk)
 begin
     if (current_state == Send_Address && Q == 0)
         Q <= 7;
@@ -175,13 +175,13 @@ begin
     else
         Q <= 0;
 end
-always @(clk)
+always @(posedge clk)
 begin
 	// Multiplexer for SCLK
 	if (current_state == Wait_For_Transmit || current_state == Stop_Condition || current_state == Start_Condition)
 		clockHold = 1;
 	else
-		clockHold = clkClk; //should be the divided clock
+		clockHold = ~clkClk; //should be the divided clock
 end
 // Output Logic
 always @(posedge dataClk or negedge reset_n)

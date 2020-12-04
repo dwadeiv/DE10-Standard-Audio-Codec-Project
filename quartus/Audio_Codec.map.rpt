@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Audio_Codec
-Thu Dec 03 16:36:00 2020
+Thu Dec 03 17:00:34 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 03 16:36:00 2020           ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 03 17:00:34 2020           ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                   ; Audio_Codec                                     ;
 ; Top-level Entity Name           ; Audio_Codec                                     ;
@@ -275,8 +275,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 626                      ;
-; Total fan-out                               ; 10438                    ;
-; Average fan-out                             ; 5.96                     ;
+; Total fan-out                               ; 10439                    ;
+; Average fan-out                             ; 5.97                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -402,9 +402,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------------+------------------------+
-; I2Cstate:I2Cstate|ACK_received.100_261             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
-; I2Cstate:I2Cstate|ACK_received.010_269             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
-; I2Cstate:I2Cstate|ACK_received.001_277             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
+; I2Cstate:I2Cstate|ACK_received.100_265             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
+; I2Cstate:I2Cstate|ACK_received.010_273             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
+; I2Cstate:I2Cstate|ACK_received.001_281             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
 ; I2Cstate:I2Cstate|SDAT                             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
 ; Number of user-specified and inferred latches = 4  ;                           ;                        ;
 +----------------------------------------------------+---------------------------+------------------------+
@@ -432,7 +432,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Total registers                              ; 776   ;
 ; Number of registers using Synchronous Clear  ; 173   ;
 ; Number of registers using Synchronous Load   ; 180   ;
-; Number of registers using Asynchronous Clear ; 308   ;
+; Number of registers using Asynchronous Clear ; 309   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 466   ;
 ; Number of registers using Preset             ; 0     ;
@@ -604,9 +604,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 41                          ;
-;     CLR               ; 11                          ;
+;     CLR               ; 12                          ;
 ;     SCLR              ; 24                          ;
-;     plain             ; 6                           ;
+;     plain             ; 5                           ;
 ; arriav_io_obuf        ; 20                          ;
 ; arriav_lcell_comb     ; 61                          ;
 ;     arith             ; 24                          ;
@@ -631,7 +631,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -704,7 +704,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Thu Dec 03 16:35:05 2020
+    Info: Processing started: Thu Dec 03 16:59:22 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -748,17 +748,17 @@ Warning (10034): Output port "ADC_SCLK" at Audio_Codec.v(56) has no driver File:
 Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:clk_divider" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 97
 Warning (10230): Verilog HDL assignment warning at clk_divider.v(29): truncated value with size 32 to match size of target (24) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v Line: 29
 Info (12128): Elaborating entity "I2Cstate" for hierarchy "I2Cstate:I2Cstate" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 103
-Warning (10230): Verilog HDL assignment warning at I2Cstate.v(62): truncated value with size 32 to match size of target (2) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 62
-Warning (10230): Verilog HDL assignment warning at I2Cstate.v(170): truncated value with size 32 to match size of target (4) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 170
-Warning (10235): Verilog HDL Always Construct warning at I2Cstate.v(177): variable "current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 177
-Warning (10235): Verilog HDL Always Construct warning at I2Cstate.v(180): variable "clkClk" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at I2Cstate.v(183): inferring latch(es) for variable "SDAT", which holds its previous value in one or more paths through the always construct File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
-Warning (10240): Verilog HDL Always Construct warning at I2Cstate.v(183): inferring latch(es) for variable "ACK_received", which holds its previous value in one or more paths through the always construct File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
-Info (10041): Inferred latch for "ACK_received.100" at I2Cstate.v(183) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
-Info (10041): Inferred latch for "ACK_received.010" at I2Cstate.v(183) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
-Info (10041): Inferred latch for "ACK_received.001" at I2Cstate.v(183) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
-Info (10041): Inferred latch for "ACK_received.000" at I2Cstate.v(183) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
-Info (10041): Inferred latch for "SDAT" at I2Cstate.v(183) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
+Warning (10230): Verilog HDL assignment warning at I2Cstate.v(66): truncated value with size 32 to match size of target (2) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 66
+Warning (10230): Verilog HDL assignment warning at I2Cstate.v(174): truncated value with size 32 to match size of target (4) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 174
+Warning (10235): Verilog HDL Always Construct warning at I2Cstate.v(181): variable "current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 181
+Warning (10235): Verilog HDL Always Construct warning at I2Cstate.v(184): variable "clkClk" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 184
+Warning (10240): Verilog HDL Always Construct warning at I2Cstate.v(187): inferring latch(es) for variable "SDAT", which holds its previous value in one or more paths through the always construct File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Warning (10240): Verilog HDL Always Construct warning at I2Cstate.v(187): inferring latch(es) for variable "ACK_received", which holds its previous value in one or more paths through the always construct File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Info (10041): Inferred latch for "ACK_received.100" at I2Cstate.v(187) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Info (10041): Inferred latch for "ACK_received.010" at I2Cstate.v(187) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Info (10041): Inferred latch for "ACK_received.001" at I2Cstate.v(187) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Info (10041): Inferred latch for "ACK_received.000" at I2Cstate.v(187) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Info (10041): Inferred latch for "SDAT" at I2Cstate.v(187) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_in84.tdf
     Info (12023): Found entity 1: altsyncram_in84 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/db/altsyncram_in84.tdf Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_tma.tdf
@@ -785,7 +785,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.12.03.16:35:33 Progress: Loading sldc3b5c4a5/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.12.03.17:00:08 Progress: Loading sldc3b5c4a5/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -828,11 +828,11 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 46
     Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 47
     Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 49
-Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.100_261 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
+Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.100_265 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
     Warning (13013): Ports D and ENA on the latch are fed by the same signal I2Cstate:I2Cstate|current_state.ACK_3 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 28
-Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.010_269 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
+Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.010_273 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
     Warning (13013): Ports D and ENA on the latch are fed by the same signal I2Cstate:I2Cstate|current_state.ACK_2 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 28
-Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.001_277 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 183
+Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.001_281 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
     Warning (13013): Ports D and ENA on the latch are fed by the same signal I2Cstate:I2Cstate|current_state.ACK_2 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 21
@@ -951,9 +951,9 @@ Info (21057): Implemented 1340 device resources after synthesis - the final reso
     Info (21061): Implemented 1038 logic cells
     Info (21064): Implemented 176 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 161 warnings
-    Info: Peak virtual memory: 4919 megabytes
-    Info: Processing ended: Thu Dec 03 16:36:00 2020
-    Info: Elapsed time: 00:00:55
-    Info: Total CPU time (on all processors): 00:01:25
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Thu Dec 03 17:00:34 2020
+    Info: Elapsed time: 00:01:12
+    Info: Total CPU time (on all processors): 00:01:59
 
 
