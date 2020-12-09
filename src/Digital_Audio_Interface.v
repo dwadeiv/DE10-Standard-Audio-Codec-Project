@@ -2,11 +2,11 @@ module Digital_Audio_Interface(
     input reset_n,
     output AUD_DACDAT,
     output AUD_DACLRCK,
-    output AUD_BCLK
+    input AUD_BCLK
 
 );
 
-audio_memory	audio_memory_inst (
+audio_memory	audio_memory (
 	.address ( address ),
 	.clock ( clkin ),
 	.q (memOut )
@@ -14,7 +14,7 @@ audio_memory	audio_memory_inst (
 
 wire [15:0] memOut;
 reg [17:0] address;
-wire [32:0] dataOut;
+reg [32:0] dataOut;
 reg [7:0] clock_counter;
 reg DACLRCK_DAT;
 reg DataAcquisition;

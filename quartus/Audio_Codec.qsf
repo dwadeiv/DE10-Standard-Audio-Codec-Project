@@ -498,8 +498,14 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb -section_id 
 set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ../src/tb.v -section_id tb
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=97" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=131072" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=131072" -section_id auto_signaltap_0
+set_global_assignment -name EDA_TEST_BENCH_FILE ../src/tb.v -section_id tb
+set_global_assignment -name VERILOG_FILE ../src/Digital_Audio_Interface.v
 set_global_assignment -name VERILOG_FILE ../src/clk_divider.v
 set_global_assignment -name VERILOG_FILE ../src/I2Cstate.v
 set_global_assignment -name VERILOG_FILE ../src/Audio_Tri_State.v
@@ -510,10 +516,6 @@ set_global_assignment -name SIP_FILE audio_pll.sip
 set_global_assignment -name QIP_FILE audio_memory.qip
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SIGNALTAP_FILE stp2.stp
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=97" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=131072" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=131072" -section_id auto_signaltap_0
+set_global_assignment -name SOURCE_FILE db/Audio_Codec.cmp.rdb
 set_global_assignment -name SLD_FILE db/stp2_auto_stripped.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

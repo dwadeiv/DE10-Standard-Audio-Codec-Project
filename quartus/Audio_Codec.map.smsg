@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Digital_Audio_Interface.v(33): always construct contains both blocking and non-blocking assignments File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Digital_Audio_Interface.v Line: 33

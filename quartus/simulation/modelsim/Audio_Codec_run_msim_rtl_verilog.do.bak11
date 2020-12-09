@@ -22,7 +22,7 @@ vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Stand
 
 vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+vsim -t 1ps -L maxii_ver -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 
 add wave *
 view structure

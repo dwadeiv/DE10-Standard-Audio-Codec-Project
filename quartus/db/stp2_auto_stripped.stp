@@ -128,14 +128,14 @@
     </signal_set>
     <position_info>
       <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="7825"/>
+      <single attribute="data horizontal scroll position" value="16337"/>
       <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
       <single attribute="setup vertical scroll position" value="0"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="8"/>
+      <single attribute="zoom level numerator" value="4"/>
       <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="7722"/>
+      <single attribute="zoom offset numerator" value="11328"/>
     </position_info>
   </instance>
   <mnemonics/>

@@ -21,68 +21,269 @@
 # 
 # vlog "D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:50:20 on Dec 06,2020
+# Start time: 21:55:28 on Dec 08,2020
 # vlog -reportprogress 300 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo 
 # -- Compiling module audio_pll
 # 
 # Top level modules:
 # 	audio_pll
-# End time: 16:50:21 on Dec 06,2020, Elapsed time: 0:00:01
+# End time: 21:55:28 on Dec 08,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:50:21 on Dec 06,2020
+# Start time: 21:55:28 on Dec 08,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v 
 # -- Compiling module clk_divider
 # 
 # Top level modules:
 # 	clk_divider
-# End time: 16:50:21 on Dec 06,2020, Elapsed time: 0:00:00
+# End time: 21:55:29 on Dec 08,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:50:21 on Dec 06,2020
+# Start time: 21:55:29 on Dec 08,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v 
 # -- Compiling module I2Cstate
 # 
 # Top level modules:
 # 	I2Cstate
-# End time: 16:50:21 on Dec 06,2020, Elapsed time: 0:00:00
+# End time: 21:55:29 on Dec 08,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:50:21 on Dec 06,2020
+# Start time: 21:55:29 on Dec 08,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v 
 # -- Compiling module Audio_Codec
 # 
 # Top level modules:
 # 	Audio_Codec
-# End time: 16:50:21 on Dec 06,2020, Elapsed time: 0:00:00
+# End time: 21:55:29 on Dec 08,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:50:21 on Dec 06,2020
+# Start time: 21:55:29 on Dec 08,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 16:50:22 on Dec 06,2020, Elapsed time: 0:00:01
+# End time: 21:55:29 on Dec 08,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:50:22 on Dec 06,2020
+# Start time: 21:55:30 on Dec 08,2020
 # Loading work.tb
 # Loading work.I2Cstate
+# ** Error: (vsim-3033) Instantiation of 'Digital_Audio_Interface' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v Line: 20
+#         Searched libraries:
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/sgate
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/rtl_work
+#             D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Audio_Codec_run_msim_rtl_verilog.do PAUSED at line 25
+do D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/Audio_Codec_run_msim_rtl_verilog.do
+# transcript on
+# if ![file isdirectory Audio_Codec_iputf_libs] {
+# 	file mkdir Audio_Codec_iputf_libs
+# }
 # 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-#                   20Starting Simulation of Lab 1.
-#                80020Work Done
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:56:20 on Dec 08,2020
+# vlog -reportprogress 300 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo 
+# -- Compiling module audio_pll
+# 
+# Top level modules:
+# 	audio_pll
+# End time: 21:56:21 on Dec 08,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:56:21 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v 
+# -- Compiling module clk_divider
+# 
+# Top level modules:
+# 	clk_divider
+# End time: 21:56:21 on Dec 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:56:21 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v 
+# -- Compiling module I2Cstate
+# 
+# Top level modules:
+# 	I2Cstate
+# End time: 21:56:22 on Dec 08,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:56:22 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v 
+# -- Compiling module Audio_Codec
+# 
+# Top level modules:
+# 	Audio_Codec
+# End time: 21:56:22 on Dec 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:56:22 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:56:22 on Dec 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L maxii_ver -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L maxii_ver -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 21:55:30 on Dec 08,2020
+# Loading work.tb
+# Loading work.I2Cstate
+# ** Error: (vsim-3033) Instantiation of 'Digital_Audio_Interface' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v Line: 20
+#         Searched libraries:
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/maxii
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/sgate
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/rtl_work
+#             D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO D:\CU_Fall_2020\FPGA\audioCodec\DE10-Standard-Audio-Codec-Project\quartus\simulation\modelsim\Audio_Codec_run_msim_rtl_verilog.do PAUSED at line 25
+do D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/Audio_Codec_run_msim_rtl_verilog.do
+# transcript on
+# if ![file isdirectory Audio_Codec_iputf_libs] {
+# 	file mkdir Audio_Codec_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:23 on Dec 08,2020
+# vlog -reportprogress 300 D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo 
+# -- Compiling module audio_pll
+# 
+# Top level modules:
+# 	audio_pll
+# End time: 21:57:24 on Dec 08,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:24 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v 
+# -- Compiling module clk_divider
+# 
+# Top level modules:
+# 	clk_divider
+# End time: 21:57:24 on Dec 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:24 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v 
+# -- Compiling module I2Cstate
+# 
+# Top level modules:
+# 	I2Cstate
+# End time: 21:57:25 on Dec 08,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:25 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v 
+# -- Compiling module Audio_Codec
+# 
+# Top level modules:
+# 	Audio_Codec
+# End time: 21:57:25 on Dec 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src {D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:25 on Dec 08,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src" D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:57:25 on Dec 08,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L maxii -L maxii_ver -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L maxii -L maxii_ver -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 21:55:30 on Dec 08,2020
+# Loading work.tb
+# Loading work.I2Cstate
+# ** Error: (vsim-3033) Instantiation of 'Digital_Audio_Interface' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/../src/tb.v Line: 20
+#         Searched libraries:
+#             D:/intelFPGA/20.1/modelsim_ase/altera/vhdl/maxii
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/maxii
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/sgate
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             D:/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/rtl_work
+#             D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO D:\CU_Fall_2020\FPGA\audioCodec\DE10-Standard-Audio-Codec-Project\quartus\simulation\modelsim\Audio_Codec_run_msim_rtl_verilog.do PAUSED at line 25

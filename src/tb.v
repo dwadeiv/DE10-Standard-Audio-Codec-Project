@@ -6,6 +6,10 @@ wire FPGA_I2C_SCLK;
 wire FPGA_I2C_SDAT;
 reg clk;
 wire current_state[3:0] ;
+
+wire AUD_DACDAT;
+wire AUD_DACLRCK;
+
 I2Cstate U0(
 	.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
 	.FPGA_I2C_SDAT (FPGA_I2C_SDAT),
@@ -13,11 +17,11 @@ I2Cstate U0(
 	.reset_n (reset_n)
 );
 
-Digital_Audio_Interface U0(
-    reset_n (reset_n),
-    AUD_DACDAT (AUD_DACDAT),
-    AUD_DACLRCK (AUD_DACDAT),
-    AUD_BCLK (AUD_BCLK)
+Digital_Audio_Interface U1(
+    .reset_n (reset_n),
+    .AUD_DACDAT (AUD_DACDAT),
+    .AUD_DACLRCK (AUD_DACLRCK),
+    .AUD_BCLK (clk)
 
 );
 
