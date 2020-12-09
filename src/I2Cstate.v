@@ -181,7 +181,7 @@ begin
 	if (current_state == Wait_For_Transmit || current_state == Stop_Condition || current_state == Start_Condition)
 		clockHold = 1;
 	else
-		clockHold = ~clkClk; //should be the divided clock
+		clockHold = clkClk; //should be the divided clock
 end
 // Output Logic
 always @(posedge dataClk or negedge reset_n)

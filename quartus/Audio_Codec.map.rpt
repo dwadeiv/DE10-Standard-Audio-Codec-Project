@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Audio_Codec
-Thu Dec 03 17:00:34 2020
+Sun Dec 06 18:44:36 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
 
 
@@ -23,13 +23,15 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
  16. Source assignments for sld_signaltap:auto_signaltap_0
  17. Parameter Settings for User Entity Instance: Top-level Entity: |Audio_Codec
- 18. Parameter Settings for User Entity Instance: I2Cstate:I2Cstate
- 19. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 20. Signal Tap Logic Analyzer Settings
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Connections to In-System Debugging Instance "auto_signaltap_0"
- 24. Analysis & Synthesis Messages
+ 18. Parameter Settings for User Entity Instance: audio_pll:audio_pll|audio_pll_0002:audio_pll_inst|altera_pll:altera_pll_i
+ 19. Parameter Settings for User Entity Instance: I2Cstate:I2Cstate
+ 20. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 21. Port Connectivity Checks: "audio_pll:audio_pll"
+ 22. Signal Tap Logic Analyzer Settings
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,13 +58,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 03 17:00:34 2020           ;
+; Analysis & Synthesis Status     ; Successful - Sun Dec 06 18:44:36 2020           ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Standard Edition ;
 ; Revision Name                   ; Audio_Codec                                     ;
 ; Top-level Entity Name           ; Audio_Codec                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 776                                             ;
+; Total registers                 ; 777                                             ;
 ; Total pins                      ; 121                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 1,441,792                                       ;
@@ -71,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
 ; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
+; Total PLLs                      ; 1                                               ;
 ; Total DLLs                      ; 0                                               ;
 +---------------------------------+-------------------------------------------------+
 
@@ -190,6 +192,9 @@ https://fpgasoftware.intel.com/eula.
 ; ../src/clk_divider.v                                               ; yes             ; User Verilog HDL File                        ; D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v                                                          ;             ;
 ; ../src/I2Cstate.v                                                  ; yes             ; User Verilog HDL File                        ; D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v                                                             ;             ;
 ; ../src/Audio_Codec.v                                               ; yes             ; User Verilog HDL File                        ; D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v                                                          ;             ;
+; audio_pll.v                                                        ; yes             ; User Wizard-Generated File                   ; D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.v                                                        ; audio_pll   ;
+; audio_pll/audio_pll_0002.v                                         ; yes             ; User Verilog HDL File                        ; D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll/audio_pll_0002.v                                         ; audio_pll   ;
+; altera_pll.v                                                       ; yes             ; Megafunction                                 ; d:/intelfpga/20.1/quartus/libraries/megafunctions/altera_pll.v                                                                               ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; d:/intelfpga/20.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                          ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; d:/intelfpga/20.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                     ;             ;
 ; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; d:/intelfpga/20.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                        ;             ;
@@ -258,14 +263,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 475                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 527                      ;
+; Combinational ALUT usage for logic          ; 528                      ;
 ;     -- 7 input functions                    ; 1                        ;
-;     -- 6 input functions                    ; 136                      ;
-;     -- 5 input functions                    ; 97                       ;
-;     -- 4 input functions                    ; 54                       ;
+;     -- 6 input functions                    ; 137                      ;
+;     -- 5 input functions                    ; 98                       ;
+;     -- 4 input functions                    ; 53                       ;
 ;     -- <=3 input functions                  ; 239                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 776                      ;
+; Dedicated logic registers                   ; 777                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 121                      ;
 ; Total MLAB memory bits                      ; 0                        ;
@@ -273,10 +278,13 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 0                        ;
 ;                                             ;                          ;
+; Total PLLs                                  ; 1                        ;
+;     -- PLLs                                 ; 1                        ;
+;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 626                      ;
-; Total fan-out                               ; 10439                    ;
-; Average fan-out                             ; 5.97                     ;
+; Total fan-out                               ; 10448                    ;
+; Average fan-out                             ; 5.96                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -285,8 +293,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                     ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |Audio_Codec                                                                                                                            ; 527 (0)             ; 776 (0)                   ; 1441792           ; 0          ; 121  ; 0            ; |Audio_Codec                                                                                                                                                                                                                                                                                                                                            ; Audio_Codec                       ; work         ;
-;    |I2Cstate:I2Cstate|                                                                                                                  ; 30 (30)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|I2Cstate:I2Cstate                                                                                                                                                                                                                                                                                                                          ; I2Cstate                          ; work         ;
+; |Audio_Codec                                                                                                                            ; 528 (1)             ; 777 (0)                   ; 1441792           ; 0          ; 121  ; 0            ; |Audio_Codec                                                                                                                                                                                                                                                                                                                                            ; Audio_Codec                       ; work         ;
+;    |I2Cstate:I2Cstate|                                                                                                                  ; 30 (30)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|I2Cstate:I2Cstate                                                                                                                                                                                                                                                                                                                          ; I2Cstate                          ; work         ;
+;    |audio_pll:audio_pll|                                                                                                                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|audio_pll:audio_pll                                                                                                                                                                                                                                                                                                                        ; audio_pll                         ; audio_pll    ;
+;       |audio_pll_0002:audio_pll_inst|                                                                                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|audio_pll:audio_pll|audio_pll_0002:audio_pll_inst                                                                                                                                                                                                                                                                                          ; audio_pll_0002                    ; audio_pll    ;
+;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|audio_pll:audio_pll|audio_pll_0002:audio_pll_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                  ; altera_pll                        ; work         ;
 ;    |clk_divider:clk_divider|                                                                                                            ; 30 (30)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|clk_divider:clk_divider                                                                                                                                                                                                                                                                                                                    ; clk_divider                       ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 93 (1)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 92 (0)              ; 90 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Audio_Codec|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
@@ -371,6 +382,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                                  ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; altera_pll   ; 20.1    ; N/A          ; N/A          ; |Audio_Codec|audio_pll:audio_pll                                                                                                                                                                                                                                                 ; audio_pll.v     ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Audio_Codec|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Audio_Codec|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Audio_Codec|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
@@ -402,9 +414,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------------+------------------------+
-; I2Cstate:I2Cstate|ACK_received.100_265             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
-; I2Cstate:I2Cstate|ACK_received.010_273             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
-; I2Cstate:I2Cstate|ACK_received.001_281             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
+; I2Cstate:I2Cstate|ACK_received.100_269             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
+; I2Cstate:I2Cstate|ACK_received.010_277             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
+; I2Cstate:I2Cstate|ACK_received.001_285             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
 ; I2Cstate:I2Cstate|SDAT                             ; I2Cstate:I2Cstate|WideOr5 ; yes                    ;
 ; Number of user-specified and inferred latches = 4  ;                           ;                        ;
 +----------------------------------------------------+---------------------------+------------------------+
@@ -429,7 +441,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 776   ;
+; Total registers                              ; 777   ;
 ; Number of registers using Synchronous Clear  ; 173   ;
 ; Number of registers using Synchronous Load   ; 180   ;
 ; Number of registers using Asynchronous Clear ; 309   ;
@@ -444,7 +456,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; I2Cstate:I2Cstate|dataClk                                                                                                                                                                                                                                                                                                       ; 14      ;
+; I2Cstate:I2Cstate|dataClk                                                                                                                                                                                                                                                                                                       ; 10      ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 3       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[15]                                                                                                                                                  ; 1       ;
@@ -474,7 +486,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; Yes        ; |Audio_Codec|I2Cstate:I2Cstate|Q[2] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; Yes        ; |Audio_Codec|I2Cstate:I2Cstate|Q[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
@@ -502,6 +514,253 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ACK_3             ; 0111  ; Unsigned Binary                                 ;
 ; Stop_Condition    ; 1000  ; Unsigned Binary                                 ;
 +-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: audio_pll:audio_pll|audio_pll_0002:audio_pll_inst|altera_pll:altera_pll_i ;
++--------------------------------------+------------------------+--------------------------------------------------------+
+; Parameter Name                       ; Value                  ; Type                                                   ;
++--------------------------------------+------------------------+--------------------------------------------------------+
+; reference_clock_frequency            ; 50.0 MHz               ; String                                                 ;
+; fractional_vco_multiplier            ; false                  ; String                                                 ;
+; pll_type                             ; General                ; String                                                 ;
+; pll_subtype                          ; General                ; String                                                 ;
+; number_of_clocks                     ; 1                      ; Signed Integer                                         ;
+; operation_mode                       ; direct                 ; String                                                 ;
+; deserialization_factor               ; 4                      ; Signed Integer                                         ;
+; data_rate                            ; 0                      ; Signed Integer                                         ;
+; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                                         ;
+; output_clock_frequency0              ; 12.000000 MHz          ; String                                                 ;
+; phase_shift0                         ; 0 ps                   ; String                                                 ;
+; duty_cycle0                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency1              ; 0 MHz                  ; String                                                 ;
+; phase_shift1                         ; 0 ps                   ; String                                                 ;
+; duty_cycle1                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency2              ; 0 MHz                  ; String                                                 ;
+; phase_shift2                         ; 0 ps                   ; String                                                 ;
+; duty_cycle2                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency3              ; 0 MHz                  ; String                                                 ;
+; phase_shift3                         ; 0 ps                   ; String                                                 ;
+; duty_cycle3                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency4              ; 0 MHz                  ; String                                                 ;
+; phase_shift4                         ; 0 ps                   ; String                                                 ;
+; duty_cycle4                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency5              ; 0 MHz                  ; String                                                 ;
+; phase_shift5                         ; 0 ps                   ; String                                                 ;
+; duty_cycle5                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency6              ; 0 MHz                  ; String                                                 ;
+; phase_shift6                         ; 0 ps                   ; String                                                 ;
+; duty_cycle6                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency7              ; 0 MHz                  ; String                                                 ;
+; phase_shift7                         ; 0 ps                   ; String                                                 ;
+; duty_cycle7                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency8              ; 0 MHz                  ; String                                                 ;
+; phase_shift8                         ; 0 ps                   ; String                                                 ;
+; duty_cycle8                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency9              ; 0 MHz                  ; String                                                 ;
+; phase_shift9                         ; 0 ps                   ; String                                                 ;
+; duty_cycle9                          ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency10             ; 0 MHz                  ; String                                                 ;
+; phase_shift10                        ; 0 ps                   ; String                                                 ;
+; duty_cycle10                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency11             ; 0 MHz                  ; String                                                 ;
+; phase_shift11                        ; 0 ps                   ; String                                                 ;
+; duty_cycle11                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency12             ; 0 MHz                  ; String                                                 ;
+; phase_shift12                        ; 0 ps                   ; String                                                 ;
+; duty_cycle12                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency13             ; 0 MHz                  ; String                                                 ;
+; phase_shift13                        ; 0 ps                   ; String                                                 ;
+; duty_cycle13                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency14             ; 0 MHz                  ; String                                                 ;
+; phase_shift14                        ; 0 ps                   ; String                                                 ;
+; duty_cycle14                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency15             ; 0 MHz                  ; String                                                 ;
+; phase_shift15                        ; 0 ps                   ; String                                                 ;
+; duty_cycle15                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency16             ; 0 MHz                  ; String                                                 ;
+; phase_shift16                        ; 0 ps                   ; String                                                 ;
+; duty_cycle16                         ; 50                     ; Signed Integer                                         ;
+; output_clock_frequency17             ; 0 MHz                  ; String                                                 ;
+; phase_shift17                        ; 0 ps                   ; String                                                 ;
+; duty_cycle17                         ; 50                     ; Signed Integer                                         ;
+; clock_name_0                         ;                        ; String                                                 ;
+; clock_name_1                         ;                        ; String                                                 ;
+; clock_name_2                         ;                        ; String                                                 ;
+; clock_name_3                         ;                        ; String                                                 ;
+; clock_name_4                         ;                        ; String                                                 ;
+; clock_name_5                         ;                        ; String                                                 ;
+; clock_name_6                         ;                        ; String                                                 ;
+; clock_name_7                         ;                        ; String                                                 ;
+; clock_name_8                         ;                        ; String                                                 ;
+; clock_name_global_0                  ; false                  ; String                                                 ;
+; clock_name_global_1                  ; false                  ; String                                                 ;
+; clock_name_global_2                  ; false                  ; String                                                 ;
+; clock_name_global_3                  ; false                  ; String                                                 ;
+; clock_name_global_4                  ; false                  ; String                                                 ;
+; clock_name_global_5                  ; false                  ; String                                                 ;
+; clock_name_global_6                  ; false                  ; String                                                 ;
+; clock_name_global_7                  ; false                  ; String                                                 ;
+; clock_name_global_8                  ; false                  ; String                                                 ;
+; m_cnt_hi_div                         ; 1                      ; Signed Integer                                         ;
+; m_cnt_lo_div                         ; 1                      ; Signed Integer                                         ;
+; m_cnt_bypass_en                      ; false                  ; String                                                 ;
+; m_cnt_odd_div_duty_en                ; false                  ; String                                                 ;
+; n_cnt_hi_div                         ; 1                      ; Signed Integer                                         ;
+; n_cnt_lo_div                         ; 1                      ; Signed Integer                                         ;
+; n_cnt_bypass_en                      ; false                  ; String                                                 ;
+; n_cnt_odd_div_duty_en                ; false                  ; String                                                 ;
+; c_cnt_hi_div0                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div0                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en0                     ; false                  ; String                                                 ;
+; c_cnt_in_src0                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en0               ; false                  ; String                                                 ;
+; c_cnt_prst0                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div1                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div1                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en1                     ; false                  ; String                                                 ;
+; c_cnt_in_src1                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en1               ; false                  ; String                                                 ;
+; c_cnt_prst1                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div2                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div2                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en2                     ; false                  ; String                                                 ;
+; c_cnt_in_src2                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en2               ; false                  ; String                                                 ;
+; c_cnt_prst2                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div3                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div3                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en3                     ; false                  ; String                                                 ;
+; c_cnt_in_src3                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en3               ; false                  ; String                                                 ;
+; c_cnt_prst3                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div4                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div4                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en4                     ; false                  ; String                                                 ;
+; c_cnt_in_src4                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en4               ; false                  ; String                                                 ;
+; c_cnt_prst4                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div5                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div5                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en5                     ; false                  ; String                                                 ;
+; c_cnt_in_src5                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en5               ; false                  ; String                                                 ;
+; c_cnt_prst5                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div6                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div6                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en6                     ; false                  ; String                                                 ;
+; c_cnt_in_src6                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en6               ; false                  ; String                                                 ;
+; c_cnt_prst6                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div7                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div7                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en7                     ; false                  ; String                                                 ;
+; c_cnt_in_src7                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en7               ; false                  ; String                                                 ;
+; c_cnt_prst7                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div8                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div8                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en8                     ; false                  ; String                                                 ;
+; c_cnt_in_src8                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en8               ; false                  ; String                                                 ;
+; c_cnt_prst8                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div9                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div9                        ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en9                     ; false                  ; String                                                 ;
+; c_cnt_in_src9                        ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en9               ; false                  ; String                                                 ;
+; c_cnt_prst9                          ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div10                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div10                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en10                    ; false                  ; String                                                 ;
+; c_cnt_in_src10                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en10              ; false                  ; String                                                 ;
+; c_cnt_prst10                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div11                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div11                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en11                    ; false                  ; String                                                 ;
+; c_cnt_in_src11                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en11              ; false                  ; String                                                 ;
+; c_cnt_prst11                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div12                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div12                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en12                    ; false                  ; String                                                 ;
+; c_cnt_in_src12                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en12              ; false                  ; String                                                 ;
+; c_cnt_prst12                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div13                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div13                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en13                    ; false                  ; String                                                 ;
+; c_cnt_in_src13                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en13              ; false                  ; String                                                 ;
+; c_cnt_prst13                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div14                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div14                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en14                    ; false                  ; String                                                 ;
+; c_cnt_in_src14                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en14              ; false                  ; String                                                 ;
+; c_cnt_prst14                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div15                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div15                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en15                    ; false                  ; String                                                 ;
+; c_cnt_in_src15                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en15              ; false                  ; String                                                 ;
+; c_cnt_prst15                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div16                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div16                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en16                    ; false                  ; String                                                 ;
+; c_cnt_in_src16                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en16              ; false                  ; String                                                 ;
+; c_cnt_prst16                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                                         ;
+; c_cnt_hi_div17                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_lo_div17                       ; 1                      ; Signed Integer                                         ;
+; c_cnt_bypass_en17                    ; false                  ; String                                                 ;
+; c_cnt_in_src17                       ; ph_mux_clk             ; String                                                 ;
+; c_cnt_odd_div_duty_en17              ; false                  ; String                                                 ;
+; c_cnt_prst17                         ; 1                      ; Signed Integer                                         ;
+; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                                         ;
+; pll_vco_div                          ; 1                      ; Signed Integer                                         ;
+; pll_slf_rst                          ; false                  ; String                                                 ;
+; pll_bw_sel                           ; low                    ; String                                                 ;
+; pll_output_clk_frequency             ; 0 MHz                  ; String                                                 ;
+; pll_cp_current                       ; 0                      ; Signed Integer                                         ;
+; pll_bwctrl                           ; 0                      ; Signed Integer                                         ;
+; pll_fractional_division              ; 1                      ; Signed Integer                                         ;
+; pll_fractional_cout                  ; 24                     ; Signed Integer                                         ;
+; pll_dsm_out_sel                      ; 1st_order              ; String                                                 ;
+; mimic_fbclk_type                     ; gclk                   ; String                                                 ;
+; pll_fbclk_mux_1                      ; glb                    ; String                                                 ;
+; pll_fbclk_mux_2                      ; fb_1                   ; String                                                 ;
+; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                                                 ;
+; pll_vcoph_div                        ; 1                      ; Signed Integer                                         ;
+; refclk1_frequency                    ; 0 MHz                  ; String                                                 ;
+; pll_clkin_0_src                      ; clk_0                  ; String                                                 ;
+; pll_clkin_1_src                      ; clk_0                  ; String                                                 ;
+; pll_clk_loss_sw_en                   ; false                  ; String                                                 ;
+; pll_auto_clk_sw_en                   ; false                  ; String                                                 ;
+; pll_manu_clk_sw_en                   ; false                  ; String                                                 ;
+; pll_clk_sw_dly                       ; 0                      ; Signed Integer                                         ;
+; pll_extclk_0_cnt_src                 ; pll_extclk_cnt_src_vss ; String                                                 ;
+; pll_extclk_1_cnt_src                 ; pll_extclk_cnt_src_vss ; String                                                 ;
++--------------------------------------+------------------------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -589,6 +848,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_pll:audio_pll"                                                                                       ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; locked ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Signal Tap Logic Analyzer Settings                                                                                                                                                                                                                                      ;
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
@@ -603,10 +871,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 41                          ;
+; arriav_ff             ; 42                          ;
 ;     CLR               ; 12                          ;
 ;     SCLR              ; 24                          ;
-;     plain             ; 5                           ;
+;     plain             ; 6                           ;
 ; arriav_io_obuf        ; 20                          ;
 ; arriav_lcell_comb     ; 61                          ;
 ;     arith             ; 24                          ;
@@ -614,15 +882,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 37                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 5                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 121                         ;
+; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.30                        ;
-; Average LUT depth     ; 1.90                        ;
+; Average LUT depth     ; 1.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -635,67 +904,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                   ;
-+---------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------+---------+
-; Name                                              ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                 ; Details ;
-+---------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------+---------+
-; CLOCK_50                                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50                                          ; N/A     ;
-; FPGA_I2C_SCLK                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; N/A     ;
-; FPGA_I2C_SCLK                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; N/A     ;
-; FPGA_I2C_SDAT                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; FPGA_I2C_SDAT                                     ; N/A     ;
-; FPGA_I2C_SDAT                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; FPGA_I2C_SDAT                                     ; N/A     ;
-; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; N/A     ;
-; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; N/A     ;
-; I2Cstate:I2Cstate|current_state.ACK_1             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_1             ; N/A     ;
-; I2Cstate:I2Cstate|current_state.ACK_1             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_1             ; N/A     ;
-; I2Cstate:I2Cstate|current_state.ACK_2             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_2             ; N/A     ;
-; I2Cstate:I2Cstate|current_state.ACK_2             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_2             ; N/A     ;
-; I2Cstate:I2Cstate|current_state.ACK_3             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_3             ; N/A     ;
-; I2Cstate:I2Cstate|current_state.ACK_3             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_3             ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Send_Data_1       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_1       ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Send_Data_1       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_1       ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Send_Data_2       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_2       ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Send_Data_2       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_2       ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Start_Condition   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Start_Condition   ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Start_Condition   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Start_Condition   ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Stop_Condition    ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Stop_Condition    ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Stop_Condition    ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Stop_Condition    ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; N/A     ;
-; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A     ;
-+---------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                                    ;
++---------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------+------------------------------------------------------------------------------------------+
+; Name                                              ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                 ; Details                                                                                  ;
++---------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------+------------------------------------------------------------------------------------------+
+; CLOCK_50                                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50                                          ; N/A                                                                                      ;
+; FPGA_I2C_SCLK                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|clockHold                       ; N/A                                                                                      ;
+; FPGA_I2C_SCLK                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|clockHold                       ; N/A                                                                                      ;
+; FPGA_I2C_SDAT                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; FPGA_I2C_SDAT                                     ; N/A                                                                                      ;
+; FPGA_I2C_SDAT                                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; FPGA_I2C_SDAT                                     ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; post-fitting  ; missing   ; Top                            ; post-synthesis    ; GND                                               ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; I2Cstate:I2Cstate|FPGA_I2C_SCLK~0                 ; post-fitting  ; missing   ; Top                            ; post-synthesis    ; GND                                               ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; I2Cstate:I2Cstate|current_state.ACK_1             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_1             ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.ACK_1             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_1             ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.ACK_2             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_2             ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.ACK_2             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_2             ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.ACK_3             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_3             ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.ACK_3             ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.ACK_3             ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Send_Data_1       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_1       ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Send_Data_1       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_1       ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Send_Data_2       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_2       ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Send_Data_2       ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Send_Data_2       ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Start_Condition   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Start_Condition   ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Start_Condition   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Start_Condition   ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Stop_Condition    ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Stop_Condition    ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Stop_Condition    ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Stop_Condition    ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; N/A                                                                                      ;
+; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; post-fitting  ; connected ; Top                            ; post-synthesis    ; I2Cstate:I2Cstate|current_state.Wait_For_Transmit ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC               ; N/A                                                                                      ;
++---------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------+------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -704,7 +973,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
-    Info: Processing started: Thu Dec 03 16:59:22 2020
+    Info: Processing started: Sun Dec 06 18:43:46 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Audio_Codec -c Audio_Codec
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -741,17 +1010,80 @@ Warning (10034): Output port "DRAM_RAS_N" at Audio_Codec.v(40) has no driver Fil
 Warning (10034): Output port "DRAM_UDQM" at Audio_Codec.v(41) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 41
 Warning (10034): Output port "DRAM_WE_N" at Audio_Codec.v(42) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 42
 Warning (10034): Output port "AUD_DACDAT" at Audio_Codec.v(48) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 48
-Warning (10034): Output port "AUD_XCK" at Audio_Codec.v(50) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 50
 Warning (10034): Output port "ADC_CONVST" at Audio_Codec.v(53) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 53
 Warning (10034): Output port "ADC_DIN" at Audio_Codec.v(54) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 54
 Warning (10034): Output port "ADC_SCLK" at Audio_Codec.v(56) has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 56
-Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:clk_divider" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 97
+Info (12128): Elaborating entity "audio_pll" for hierarchy "audio_pll:audio_pll" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 93
+Info (12128): Elaborating entity "audio_pll_0002" for hierarchy "audio_pll:audio_pll|audio_pll_0002:audio_pll_inst" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.v Line: 20
+Info (12128): Elaborating entity "altera_pll" for hierarchy "audio_pll:audio_pll|audio_pll_0002:audio_pll_inst|altera_pll:altera_pll_i" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll/audio_pll_0002.v Line: 85
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "audio_pll:audio_pll|audio_pll_0002:audio_pll_inst|altera_pll:altera_pll_i" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll/audio_pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "audio_pll:audio_pll|audio_pll_0002:audio_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll/audio_pll_0002.v Line: 85
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "12.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:clk_divider" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 96
 Warning (10230): Verilog HDL assignment warning at clk_divider.v(29): truncated value with size 32 to match size of target (24) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v Line: 29
-Info (12128): Elaborating entity "I2Cstate" for hierarchy "I2Cstate:I2Cstate" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 103
+Info (12128): Elaborating entity "I2Cstate" for hierarchy "I2Cstate:I2Cstate" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 102
 Warning (10230): Verilog HDL assignment warning at I2Cstate.v(66): truncated value with size 32 to match size of target (2) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 66
 Warning (10230): Verilog HDL assignment warning at I2Cstate.v(174): truncated value with size 32 to match size of target (4) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 174
-Warning (10235): Verilog HDL Always Construct warning at I2Cstate.v(181): variable "current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 181
-Warning (10235): Verilog HDL Always Construct warning at I2Cstate.v(184): variable "clkClk" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 184
 Warning (10240): Verilog HDL Always Construct warning at I2Cstate.v(187): inferring latch(es) for variable "SDAT", which holds its previous value in one or more paths through the always construct File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
 Warning (10240): Verilog HDL Always Construct warning at I2Cstate.v(187): inferring latch(es) for variable "ACK_received", which holds its previous value in one or more paths through the always construct File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
 Info (10041): Inferred latch for "ACK_received.100" at I2Cstate.v(187) File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
@@ -785,7 +1117,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.12.03.17:00:08 Progress: Loading sldc3b5c4a5/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.12.06.18:44:15 Progress: Loading sldc3b5c4a5/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -808,6 +1140,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/db/ip/sldc3b5c4a5/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldc3b5c4a5/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/db/ip/sldc3b5c4a5/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 38
     Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 38
@@ -828,11 +1161,11 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 46
     Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 47
     Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 49
-Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.100_265 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.100_269 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
     Warning (13013): Ports D and ENA on the latch are fed by the same signal I2Cstate:I2Cstate|current_state.ACK_3 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 28
-Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.010_273 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.010_277 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
     Warning (13013): Ports D and ENA on the latch are fed by the same signal I2Cstate:I2Cstate|current_state.ACK_2 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 28
-Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.001_281 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
+Warning (13012): Latch I2Cstate:I2Cstate|ACK_received.001_285 has unsafe behavior File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 187
     Warning (13013): Ports D and ENA on the latch are fed by the same signal I2Cstate:I2Cstate|current_state.ACK_2 File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 21
@@ -911,20 +1244,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 41
     Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 42
     Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 48
-    Warning (13410): Pin "AUD_XCK" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 50
     Warning (13410): Pin "ADC_CONVST" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 53
     Warning (13410): Pin "ADC_DIN" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 54
     Warning (13410): Pin "ADC_SCLK" is stuck at GND File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 56
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Warning (20013): Ignored 16 assignments for entity "audio_pll" -- entity does not exist in design
-    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity audio_pll -sip audio_pll.sip -library lib_audio_pll was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 20.1 -entity audio_pll -sip audio_pll.sip -library lib_audio_pll was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity audio_pll -sip audio_pll.sip -library lib_audio_pll was ignored
-Warning (20013): Ignored 317 assignments for entity "audio_pll_0002" -- entity does not exist in design
-Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 55 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 53 of its 55 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+    Info (16011): Adding 16 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 18 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK2_50" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 9
     Warning (15610): No output dependent on input pin "CLOCK3_50" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 10
@@ -944,16 +1271,17 @@ Warning (21074): Design contains 18 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 18
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 45
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v Line: 55
-Info (21057): Implemented 1340 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1342 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 82 output pins
     Info (21060): Implemented 20 bidirectional pins
-    Info (21061): Implemented 1038 logic cells
+    Info (21061): Implemented 1039 logic cells
     Info (21064): Implemented 176 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 161 warnings
-    Info: Peak virtual memory: 4918 megabytes
-    Info: Processing ended: Thu Dec 03 17:00:34 2020
-    Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:01:59
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 154 warnings
+    Info: Peak virtual memory: 4929 megabytes
+    Info: Processing ended: Sun Dec 06 18:44:36 2020
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:01:31
 
 
