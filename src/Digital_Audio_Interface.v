@@ -2,12 +2,7 @@ module Digital_Audio_Interface(
     input reset_n,
     output AUD_DACDAT,
     output AUD_DACLRCK,
-    output AUD_BCLK, // let it run
-    // every 250 bclks generate lrc pulse
-    // generated and taken aw3ay on falling edge of bclk
-    // first rising edge, then send msb and the nexty 32 rising edges
-    // read value out of memory 16 bits, clock it to codec, then clock it in 
-    input [15:0] mem
+    output AUD_BCLK
 
 );
 
@@ -27,9 +22,9 @@ reg [19:0] Q;
 
 always @(negedge AUD_BCLK)
 begin
-    if (DataAcquisition == 1 && Q == 240264)
+    if (DataAcquisition == 1 && Q == 240254)
         Q <= 0;
-    else if (Q != 240264)
+    else if (Q != 240254)
         Q <= Q + 1;
     else
         Q <= 0;
@@ -55,14 +50,17 @@ always @(negedge AUD_BCLK or negedge reset_n)
     end
     else if (clock_counter == 1 && DataAcquisition == 1)
     begin
-        address = Q;
         DACLRCK_DAT = 0;
         clock_counter <= clock_counter + 1;
+        dataOut[31:16] = memOut;
+        dataOut[15:0] = memOut;
     end
     else
     begin
         clock_counter <= clock_counter + 1;
     end
+
+    assign AUD_DACDAT = dataOut;
 
 
 endmodule
