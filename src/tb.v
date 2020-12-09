@@ -13,7 +13,13 @@ I2Cstate U0(
 	.reset_n (reset_n)
 );
 
+Digital_Audio_Interface U0(
+    reset_n (reset_n),
+    AUD_DACDAT (AUD_DACDAT),
+    AUD_DACLRCK (AUD_DACDAT),
+    AUD_BCLK (AUD_BCLK)
 
+);
 
 
 
