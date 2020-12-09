@@ -77,22 +77,21 @@ parameter Stop_Condition = 4'b1000;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [3:0] next_state;wire clk;
+reg [3:0] next_state;
+wire clk;
 wire [7:0] Chip_Address;
-
-
-
+wire pllClk;
 
 //=======================================================
 //  Structural coding
 //=======================================================
-/*
+
 audio_pll audio_pll(
 	.refclk   (CLOCK_50),  
 	.rst      (~KEY[0]),  
-	.outclk_0 (clk)
+	.outclk_0 (pllClk)
 );
-*/
+
 
 clk_divider clk_divider(CLOCK_50, clk );
 I2Cstate I2Cstate(
@@ -102,7 +101,7 @@ I2Cstate I2Cstate(
 	.reset_n (KEY[0])
 );
 
-
+assign AUD_XCK = pllClk;
 
 
 
