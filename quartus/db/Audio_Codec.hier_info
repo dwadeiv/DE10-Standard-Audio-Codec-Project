@@ -2,9 +2,8 @@
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
-CLOCK_50 => CLOCK_50.IN1
-KEY[0] => _.IN1
-KEY[0] => current_state~3.DATAIN
+CLOCK_50 => CLOCK_50.IN2
+KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
@@ -114,13 +113,13 @@ AUD_ADCLRCK <> <UNC>
 AUD_BCLK <> <UNC>
 AUD_DACDAT <= <GND>
 AUD_DACLRCK <> <UNC>
-AUD_XCK <= <GND>
+AUD_XCK <= audio_pll:audio_pll.outclk_0
 ADC_CONVST <= <GND>
 ADC_DIN <= <GND>
 ADC_DOUT => ~NO_FANOUT~
 ADC_SCLK <= <GND>
-FPGA_I2C_SCLK <= clockHold.DB_MAX_OUTPUT_PORT_TYPE
-FPGA_I2C_SDAT <> FPGA_I2C_SDAT
+FPGA_I2C_SCLK <= I2Cstate:I2Cstate.FPGA_I2C_SCLK
+FPGA_I2C_SDAT <> I2Cstate:I2Cstate.FPGA_I2C_SDAT
 
 
 |Audio_Codec|audio_pll:audio_pll
@@ -307,5 +306,49 @@ extclk_out[0] <= <GND>
 extclk_out[1] <= <GND>
 cascade_out[0] <= <GND>
 zdbfbclk <> <GND>
+
+
+|Audio_Codec|clk_divider:clk_divider
+main_clock => slow_clock.CLK
+main_clock => divide_counter[0].CLK
+main_clock => divide_counter[1].CLK
+main_clock => divide_counter[2].CLK
+main_clock => divide_counter[3].CLK
+main_clock => divide_counter[4].CLK
+main_clock => divide_counter[5].CLK
+main_clock => divide_counter[6].CLK
+main_clock => divide_counter[7].CLK
+main_clock => divide_counter[8].CLK
+main_clock => divide_counter[9].CLK
+main_clock => divide_counter[10].CLK
+main_clock => divide_counter[11].CLK
+main_clock => divide_counter[12].CLK
+main_clock => divide_counter[13].CLK
+main_clock => divide_counter[14].CLK
+main_clock => divide_counter[15].CLK
+main_clock => divide_counter[16].CLK
+main_clock => divide_counter[17].CLK
+main_clock => divide_counter[18].CLK
+main_clock => divide_counter[19].CLK
+main_clock => divide_counter[20].CLK
+main_clock => divide_counter[21].CLK
+main_clock => divide_counter[22].CLK
+main_clock => divide_counter[23].CLK
+CLOCK_1_HZ <= slow_clock.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Audio_Codec|I2Cstate:I2Cstate
+FPGA_I2C_SCLK <= clockHold.DB_MAX_OUTPUT_PORT_TYPE
+FPGA_I2C_SDAT <> FPGA_I2C_SDAT
+clk => clockHold.CLK
+clk => clkClk.CLK
+clk => dataClk.CLK
+clk => offsetClk[0].CLK
+clk => offsetClk[1].CLK
+reset_n => offsetClk[0].ACLR
+reset_n => offsetClk[1].ACLR
+reset_n => clkClk.ACLR
+reset_n => dataClk.PRESET
+reset_n => current_state~3.DATAIN
 
 

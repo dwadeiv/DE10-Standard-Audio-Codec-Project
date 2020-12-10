@@ -1,0 +1,3 @@
+
+
+vlogan +v2k "D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo"
