@@ -1,27 +1,31 @@
 
 `timescale 1 ns / 100 ps
 module tb();
-reg  reset_n;
+//reg  reset_n;
 wire FPGA_I2C_SCLK;
 wire FPGA_I2C_SDAT;
-reg clk;
+reg CLOCK_50;
+wire AUD_BCLK;
+wire AUD_DACDAT;
+wire AUD_DACLRCK;
+wire AUD_XCK
+
 wire current_state[3:0] ;
 
 wire AUD_DACDAT;
 wire AUD_DACLRCK;
+reg [3:0] reset_n;
 
-I2Cstate U0(
-	.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
-	.FPGA_I2C_SDAT (FPGA_I2C_SDAT),
-	.clk (clk),
-	.reset_n (reset_n)
-);
-
-Digital_Audio_Interface U1(
-    .reset_n (reset_n),
+Audio_Codec U0(
+    .CLOCK_50 (CLOCK_50),
+    .KEY (reset_n),
+    .AUD_BCLK (AUD_BCLK),
     .AUD_DACDAT (AUD_DACDAT),
-    .AUD_DACLRCK (AUD_DACLRCK),
-    .AUD_BCLK (clk)
+    .AUD_XCK (AUD_XCK),
+    .FPGA_I2C_SCLK (FPGA_I2C_SCLK),
+    .FPGA_I2C_SDAT (FPGA_I2C_SDAT)
+
+
 
 );
 
@@ -29,11 +33,11 @@ Digital_Audio_Interface U1(
 
 
 always
-    #10 clk = ~clk;
+    #10 CLOCK_50 = ~CLOCK_50;
 initial 
     begin
         //give initial values and trigger reset cycle
-        clk = 0;
+        CLOCK_50 = 0;
         reset_n = 0;
         #20 
         reset_n = 1;

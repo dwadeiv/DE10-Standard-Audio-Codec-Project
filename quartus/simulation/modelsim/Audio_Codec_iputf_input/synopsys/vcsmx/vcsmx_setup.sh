@@ -1,3 +1,3 @@
 
 
-vlogan +v2k "D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo"
+vlogan +v2k "//Mac/Home/Documents/Desktop_shit/FPGA/Projects/Audio_Codec/quartus/audio_pll_sim/audio_pll.vo"
