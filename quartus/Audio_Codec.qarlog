@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec.qarlog
+
+Archive:	D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec.qar
+Date:		Wed Dec 09 23:40:40 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Standard Edition
+
+	=========== Files Selected: ===========
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec.SDC
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec.qpf
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec.qsf
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec.sdc
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/Audio_Codec_assignment_defaults.qdf
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_memory.qip
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_memory.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_memory_bb.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_memory_syn.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.cmp
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.qip
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.sip
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.spd
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll/audio_pll_0002.qip
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll/audio_pll_0002.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/audio_pll_sim/audio_pll.vo
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/db/stp2_auto_stripped.stp
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/quartus/stp2.stp
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Codec.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/Audio_Tri_State.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/I2Cstate.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/clk_divider.v
+D:/CU_Fall_2020/FPGA/audioCodec/DE10-Standard-Audio-Codec-Project/src/tb.v
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
